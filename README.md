@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Introduction to Quarto
 ================
 
 ### posit::conf(2024)
