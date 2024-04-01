@@ -3,7 +3,7 @@ Introduction to Quarto
 
 ### posit::conf(2024)
 
-by INSTRUCTOR_NAME
+by Andrew Bray
 
 -----
 
