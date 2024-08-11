@@ -11,7 +11,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section",
     "title": "Welcome to Quarto",
     "section": "",
-    "text": "Workshop materials are at:\npos.it/quarto-r-conf23"
+    "text": "Workshop materials are at:\nhttps://posit-conf-2024.github.io/quarto-intro/"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-1",
@@ -39,7 +39,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#discussions-discord",
     "title": "Welcome to Quarto",
     "section": "Discussions: discord",
-    "text": "Discussions: discord\nAsk questions at #introduction-to-quarto-with-r-and-rstudio."
+    "text": "Discussions: discord\nAsk questions at #workshop-quarto-intro."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#flow-of-the-workshop",
@@ -56,11 +56,25 @@
     "text": "Stickies\n\n\n\n\n\n\n\n\n\nDuring an activity, place a blue sticky on your laptop if you’re good to go and a red sticky if you want help.\n\n\n\n\nImage by Megan Duffy"
   },
   {
-    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#practicalities",
-    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#practicalities",
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#wifi",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#wifi",
     "title": "Welcome to Quarto",
-    "section": "Practicalities",
-    "text": "Practicalities\n\n\n\nWiFi:\n\nNetwork: Posit Conf 2023\nPassword: conf2023\n\nThere are gender-neutral bathrooms located are among the Grand Suite Bathrooms.\nThere are two meditation/prayer rooms: Grand Suite 2A and Grand Suite 2B. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.\nThe lactation room is located in Grand Suite 1. Open Sunday - Tuesday 7:30 a.m. - 7:00 p.m., Wednesday 8:00 a.m. - 6:00 p.m.\n\n\n\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.\nThe Code of Conduct and COVID policies can be found at https://posit.co/code-of-conduct/. Please review them carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+    "section": "WiFi",
+    "text": "WiFi\nNetwork: Posit Conf 2024 Password: conf2024"
+  },
+  {
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#code-of-conduct",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#code-of-conduct",
+    "title": "Welcome to Quarto",
+    "section": "Code of Conduct",
+    "text": "Code of Conduct\n\nThe Code of Conduct can be found at https://posit.co/code-of-conduct/.\nPlease review it carefully. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+  },
+  {
+    "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#other-useful-info",
+    "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#other-useful-info",
+    "title": "Welcome to Quarto",
+    "section": "Other useful info",
+    "text": "Other useful info\n\nThere are gender-neutral bathrooms located on floors 3, 4, 5, 6, 7.\nThere is a meditation/prayer room in Room 503. Available Mon & Tues 7 am - 7 pm and Wed 7 am - 5 pm.\nThe lactation room in Room 509, same timings as above.\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices."
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-2",
@@ -74,7 +88,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\nOpen hello-penguins.qmd in RStudio and…\n\nRender the document.\nReplace the name with your own and re-render.\nInspect the components of the document and modify one or two more and re-render. Consider changing the options at the top, the text, or the code.\nLook carefully through the source of hello-penguins.qmd. What do you notice that’s different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).\n\n\n\n\n−+\n10:00"
+    "text": "Your Turn\nOpen hello-penguins.qmd in RStudio and…\n\nRender the document.\nReplace the name with your own and re-render.\nInspect the components of the document and modify one or two more and re-render. Consider changing the options at the top, the text, or the code.\n(If you’ve used Rmarkdown) Look carefully through the source of hello-penguins.qmd. What do you notice that’s different from what it would look like in an Rmd document? Work with your neighbor to see if you can find the differences (there are at least 3).\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#articles",
@@ -165,7 +179,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-1",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\n\nRender 2-formats.qmd to html and view the html file in an editor. How is the list expressed in html? (you can click on it in the Files pane)\nRender 2-formats.qmd to latex and view the latex file in an editor. How is the list expressed in latex?\nChange the extension of 2-formats.qmd to be .md and .Rmd and re-render. Does the output differ?\nTry rendering the file to a pdf format but this time using the CLI (command line interval) in the Terminal tab.\nquarto render &lt;input&gt; --to &lt;format&gt;\n\n\n\n\n−+\n07:00"
+    "text": "Your Turn\n\nRender 2-formats.qmd to html and view the html file in an editor. How is the list expressed in html? (you can click on it in the Files pane)\nRender 2-formats.qmd to latex and view the latex file in an editor. How is the list expressed in latex?\nChange the extension of 2-formats.qmd to be .md and .Rmd and re-render. Does the output differ?\nTry rendering the file to a pdf format but this time using the CLI (command line interval) in the Terminal tab.\nquarto render &lt;input file&gt; --to &lt;format name&gt;\n\n\n\n\n−+\n07:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#try-pandoc",
@@ -221,7 +235,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#your-turn-2",
     "title": "Welcome to Quarto",
     "section": "Your Turn",
-    "text": "Your Turn\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options that sound interesting.\nBring back your two favorite to share in chat when we return from breakout rooms.\nUse the HTML reference as needed.\n\n\n\n\n−+\n05:00"
+    "text": "Your Turn\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options that sound interesting.\nIdentify two of your favorites to share with the group.\nUse the HTML reference as needed.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section-12",
@@ -1490,7 +1504,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1] -0.19519538 -0.39256575 -0.11680839 -0.33209423 -0.03651919"
+    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.5220975  0.3667823 -0.4414841  0.3721355  1.0595306"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
