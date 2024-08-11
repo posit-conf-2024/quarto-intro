@@ -1,0 +1,6 @@
+---
+title: "Quarto"
+subtitle: "rstudio::conf(2022) <br> From R Markdown to Quarto"
+author: "Andrew Bray"
+format: qmdrslides-revealjs
+---

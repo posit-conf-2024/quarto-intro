@@ -1,0 +1,12 @@
+---
+title: "Presentations"
+---
+
+> Toggle your format from HTML to revealjs and enter the wide world of Quarto presentations. Learn to turn a bland slide deck into one that is both functional and has some style.
+
+[Full Screen](slides.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
+

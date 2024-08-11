@@ -1,0 +1,75 @@
+---
+title: "Presentations"
+subtitle: "rstudio::conf(2022) <br> From R Markdown to Quarto"
+author: "Andrew Bray"
+format: qmdrslides-revealjs
+---
+
+## Getting Exercise
+
+To get the materials for each part of this course packed in an RStudio Project, run:
+
+````{.markdown style="font-size: 1.5em"}
+```{{r}}
+usethis::use_course("rmd-to-quarto/presentations")
+```
+````
+
+## One concept, three formats
+
+:::columns
+:::{.column width=33%}
+![](images/beamer.png)
+
+````yaml
+---
+title: "Quarto Presentations"
+author: Author
+format: beamer
+---
+````
+:::
+:::{.column width=33% .fragment}
+![](images/pptx.png)
+
+````yaml
+---
+title: "Quarto Presentations"
+author: Author
+format: pptx
+---
+````
+:::
+:::{.column width=33% .fragment}
+![](images/reveal.png)
+
+````yaml
+---
+title: "Quarto Presentations"
+author: Author
+format: revealjs
+---
+````
+:::
+:::
+
+## Revealjs
+
+![](images/reveal-logo.png){fig-align=center}
+
+- HTML format for slides (similar to remarkjs utilized by `xaringan` R package)
+- Feature rich and still being developed
+
+. . .
+
+> [Let's give it a spin!]{.block-el style="font-size: 1.2em"}
+
+## Features of Revealjs
+
+::: {style="text-align: center; margin-top: 1em"}
+[Quarto Demo Presentation](https://quarto.org/docs/presentations/revealjs/demo/#/title-slide){preview-link="true" style="text-align: center"}
+:::
+
+
+
+

@@ -1,0 +1,13 @@
+---
+title: "ex-1"
+format: html
+---
+
+Create a New Project > Quarto Presentation >  and click Render to see the website.
+ 
+With your neighbors, look into the files that were created and discuss.
+
+1. Look through the `_quarto.yaml` project file. What do you think each line does? Which `.qmd` documents does the project file control?
+2. For each and every file that are in the website directory: what is its role in making the rendered website?
+3. How would you turn a generic project (`quarto create-project [dir]` at the terminal) into a website like this?
+4. Change the format to `pptx` and `beamer` to compare how each of the elements is expressed.

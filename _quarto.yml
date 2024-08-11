@@ -1,0 +1,53 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!materials/*/exercises/"
+  output-dir: docs
+
+from: markdown+emoji
+
+website:
+  title: "Intro to Quarto"
+  page-navigation: true
+  navbar:
+    background: light
+    foreground: dark
+    right:
+      - text: "About"
+        href: about.qmd
+      - icon: cloud-fill
+        href: https://posit.cloud/spaces/397249
+        aria-label: Posit Cloud
+      - icon: github
+        href: https://github.com/posit-conf-2024/quarto-intro
+        aria-label: GitHub
+  sidebar:
+    - title: "Materials"
+      style: docked
+      align: left
+      contents:
+          - section: "Intro: Single Docs"
+            contents:
+            - text: "1. Welcome to Quarto"
+              href: materials/1-single-docs/1-welcome-to-quarto/index.qmd
+            - text: "2. Polishing Documents"
+              href: materials/1-single-docs/2-polishing-docs/index.qmd
+            - text: "3. Presentations"
+              href: materials/1-single-docs/3-presentations/index.qmd
+            - text: "4. Sharing Your Work"
+              href: materials/1-single-docs/4-sharing-your-work/index.qmd
+  page-footer:
+    right: "This page is built with {{< fa heart >}} and [Quarto](https://quarto.org/)."
+    left: "&copy; 2024, Andrew Bray"
+
+format: 
+  html:
+    theme: [default, assets/custom.scss]
+    toc: false
+    
+# Design tips:
+# 1. maggieappleton.com
+# 2. Palette: https://www.jpl.nasa.gov/images/the-grand-tour-jpl-travel-poster
+
+  

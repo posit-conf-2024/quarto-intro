@@ -1,0 +1,27 @@
+---
+title: "Workshop"
+subtitle: "From R Markdown to Quarto </br> rstudio::conf 2022"
+author: "Andrew Bray"
+format: qmdrslides-revealjs
+---
+
+## {data-menu-item="Workshop Goals"}
+
+\
+\
+
+### Goals for the Workshop {style="font-size: 2.5em; text-align: center"}
+
+:::{.incremental style="font-size: 1.5em"}
+1. Everyone leaves with a document, slides, and a website.
+
+2. Learn from one another. 
+
+3. Build an understanding of the big picture.
+:::
+
+##
+
+:::{.v-center-container}
+Please go to [rstd.io/conf-workshop-survey](https://rstd.io/conf-workshop-survey) to fill out the workshop feedback survey. Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops and we really appreciate you taking the time to provide it.
+:::
