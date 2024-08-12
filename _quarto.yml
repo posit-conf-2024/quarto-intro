@@ -33,10 +33,12 @@ website:
               href: materials/1-single-docs/1-welcome-to-quarto/index.qmd
             - text: "2. Polishing Documents"
               href: materials/1-single-docs/2-polishing-docs/index.qmd
-            - text: "3. Presentations"
-              href: materials/1-single-docs/3-presentations/index.qmd
-            - text: "4. Sharing Your Work"
-              href: materials/1-single-docs/4-sharing-your-work/index.qmd
+            - text: "3. Intro to Extensions"
+              href: materials/1-single-docs/3-extensions/index.qmd
+            - text: "4. Presentations"
+              href: materials/1-single-docs/4-presentations/index.qmd
+            - text: "5. Sharing Your Work"
+              href: materials/1-single-docs/5-sharing-your-work/index.qmd
   page-footer:
     right: "This page is built with {{< fa heart >}} and [Quarto](https://quarto.org/)."
     left: "&copy; 2024, Andrew Bray"
