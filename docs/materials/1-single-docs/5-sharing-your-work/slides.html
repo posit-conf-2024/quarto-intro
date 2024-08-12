@@ -463,35 +463,682 @@
 <h1>Custom Formats</h1>
 
 </section>
-<section id="our-turn" class="slide level2">
-<h2>Our Turn</h2>
-<p>Let’s</p>
-</section></section>
-<section id="custom-revealjs" class="title-slide slide level1 center">
-<h1>Custom Revealjs</h1>
-
+<section id="custom-formats-1" class="slide level2">
+<h2>Custom Formats</h2>
+<p>Custom Formats (aka Templates) are a way to bundle fonts, images, logos, filters, formatting, and metadata for use by others.</p>
+<div class="fragment">
+<p><em>Install a custom format</em></p>
+<ul>
+<li><code>quarto add &lt;githubname&gt;/&lt;reponame&gt;</code> to install the format</li>
+<li><code>quarto use template &lt;githubname&gt;/&lt;reponame&gt;</code> to install the format with a sample qmd file.</li>
+</ul>
+</div>
+<div class="fragment">
+<p><em>Use the custom format</em></p>
+<p>Set <code>format: &lt;extentionname&gt;-&lt;baseformat&gt;</code>. Example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> qmdrslides-revealjs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-
+<section id="our-turn-custom-revealjs" class="slide level2 our-turn">
+<h2>Our Turn: Custom Revealjs</h2>
+<ol type="1">
+<li><p>In the same directory as your slide deck, run at the terminal:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">quarto</span> add qmdr/qmdrslides</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Change your document yaml to use <code>format: qmdrslides-revealjs</code></p></li>
+</ol>
+</section></section>
 <section>
 <section id="journal-articles" class="title-slide slide level1 center">
 <h1>Journal Articles</h1>
 
 </section>
-<section id="our-turn-1" class="slide level2 our-turn">
+<section id="our-turn" class="slide level2 our-turn">
 <h2>Our Turn</h2>
 <p>Let’s prepare an article to submit to the Journal of Statistical Software.</p>
 <ol type="1">
 <li><p>At the Terminal.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">quarto</span> use template quarto-journals/jss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">quarto</span> use template quarto-journals/jss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Render.</p></li>
 <li><p>Modify to your hearts content.</p></li>
 </ol>
 </section></section>
+<section>
 <section id="websites" class="title-slide slide level1 center">
 <h1>Websites</h1>
 
 </section>
-
+<section id="what-defines-a-quarto-project" class="slide level2">
+<h2>What defines a Quarto Project?</h2>
+<div class="r-fit-text">
+<blockquote>
+<p><span class="fragment">A Quarto Project is a directory</span> <span class="fragment">that contains a file called <code>_quarto.yml</code>.</span></p>
+</blockquote>
+</div>
+<p><br>
+</p>
+<div class="columns">
+<div class="column fragment fade-right" style="width:50%;">
+<p>This is a Quarto Project.</p>
+<p><img data-src="images/quarto-project.png" class="drop" alt="Files panel in RStudio showing my-doc.qmd and _quarto.yml."></p>
+</div><div class="column fragment fade-left" style="width:50%;">
+<p>This is not.</p>
+<p><img data-src="images/not-quarto-project.png" class="drop" alt="Files panel in RStudio showing only my-doc.qmd."></p>
+</div></div>
+</section>
+<section id="quarto.yml" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">_quarto.yml</h2>
+<p>A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="_quarto.yml"><pre class="sourceCode numberSource yaml fragment number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb5-1" class="hljs-ln-code"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A Barebones Project"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quarto.yml-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">_quarto.yml</h2>
+<p>A YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="_quarto.yml" data-code-line-numbers="1-20|528-548"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb6-1" class="hljs-ln-code"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb6-2" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb6-3" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _site</span></span>
+<span id="cb6-4" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb6-5" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/docs/download/_download.json"</span></span>
+<span id="cb6-6" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/docs/download/_prerelease.json"</span></span>
+<span id="cb6-7" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"/_redirects"</span></span>
+<span id="cb6-8" class="hljs-ln-code"><a></a></span>
+<span id="cb6-9" class="hljs-ln-code"><a></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb6-10" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto"</span></span>
+<span id="cb6-11" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> </span><span class="st">"quarto-dark-bg.jpeg"</span></span>
+<span id="cb6-12" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">favicon</span><span class="kw">:</span><span class="at"> </span><span class="st">"favicon.png"</span></span>
+<span id="cb6-13" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> </span><span class="st">"G-FV9Z7SDZ0M"</span></span>
+<span id="cb6-14" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">open-graph</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-15" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">twitter-card</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-16" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> https://quarto.org</span></span>
+<span id="cb6-17" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">repo-url</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-web</span></span>
+<span id="cb6-18" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">issue-url</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli/issues/new/choose</span></span>
+<span id="cb6-19" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">repo-actions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">edit</span><span class="kw">,</span><span class="at"> issue</span><span class="kw">]</span></span>
+<span id="cb6-20" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">page-navigation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-21" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">bread-crumbs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-22" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">search</span><span class="kw">:</span></span>
+<span id="cb6-23" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">show-item-context</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-24" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> overlay</span></span>
+<span id="cb6-25" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">algolia</span><span class="kw">:</span></span>
+<span id="cb6-26" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">index-name</span><span class="kw">:</span><span class="at"> prod_QUARTO</span></span>
+<span id="cb6-27" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">application-id</span><span class="kw">:</span><span class="at"> ZPJB5I1QN7</span></span>
+<span id="cb6-28" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">search-only-api-key</span><span class="kw">:</span><span class="at"> 41be6c1e0a7fea4a51b107810facf577</span></span>
+<span id="cb6-29" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">analytics-events</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-30" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">show-logo</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-31" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span></span>
+<span id="cb6-32" class="hljs-ln-code"><a></a><span class="fu">    left</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb6-33" class="hljs-ln-code"><a></a>      Proudly supported by</span>
+<span id="cb6-34" class="hljs-ln-code"><a></a>      [![](https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg){fig-alt="Posit" width=65px}](https://posit.co)</span>
+<span id="cb6-35" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">center</span><span class="kw">:</span></span>
+<span id="cb6-36" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
+<span id="cb6-37" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> about.qmd</span></span>
+<span id="cb6-38" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FAQ"</span></span>
+<span id="cb6-39" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/faq/index.qmd</span></span>
+<span id="cb6-40" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"License"</span></span>
+<span id="cb6-41" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> license.qmd</span></span>
+<span id="cb6-42" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Trademark"</span></span>
+<span id="cb6-43" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> trademark.qmd</span></span>
+<span id="cb6-44" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb6-45" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb6-46" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/quarto_pub</span></span>
+<span id="cb6-47" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto Twitter</span></span>
+<span id="cb6-48" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb6-49" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli</span></span>
+<span id="cb6-50" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto GitHub</span></span>
+<span id="cb6-51" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> rss</span></span>
+<span id="cb6-52" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://quarto.org/docs/blog/index.xml</span></span>
+<span id="cb6-53" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Quarto Blog RSS        </span></span>
+<span id="cb6-54" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb6-55" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> light</span></span>
+<span id="cb6-56" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> quarto.png</span></span>
+<span id="cb6-57" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">logo-alt</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto logo."</span></span>
+<span id="cb6-58" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb6-59" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">collapse-below</span><span class="kw">:</span><span class="at"> lg</span></span>
+<span id="cb6-60" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb6-61" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb6-62" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb6-63" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Get Started"</span></span>
+<span id="cb6-64" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/index.qmd</span></span>
+<span id="cb6-65" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Guide"</span></span>
+<span id="cb6-66" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/guide/index.qmd</span></span>
+<span id="cb6-67" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Extensions</span></span>
+<span id="cb6-68" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/index.qmd</span></span>
+<span id="cb6-69" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb6-70" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/index.qmd</span></span>
+<span id="cb6-71" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gallery"</span></span>
+<span id="cb6-72" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/gallery/index.qmd</span></span>
+<span id="cb6-73" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Blog"</span></span>
+<span id="cb6-74" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/blog/index.qmd</span></span>
+<span id="cb6-75" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Help"</span></span>
+<span id="cb6-76" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">menu</span><span class="kw">:</span></span>
+<span id="cb6-77" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Report a Bug"</span></span>
+<span id="cb6-78" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"bug"</span></span>
+<span id="cb6-79" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/quarto-dev/quarto-cli/issues"</span></span>
+<span id="cb6-80" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ask a Question"</span></span>
+<span id="cb6-81" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"chat-right-text"</span></span>
+<span id="cb6-82" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/quarto-dev/quarto-cli/discussions"</span></span>
+<span id="cb6-83" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FAQ"</span></span>
+<span id="cb6-84" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"question-circle"</span></span>
+<span id="cb6-85" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/faq/index.qmd</span></span>
+<span id="cb6-86" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">tools</span><span class="kw">:</span></span>
+<span id="cb6-87" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb6-88" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/quarto_pub</span></span>
+<span id="cb6-89" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto Twitter</span></span>
+<span id="cb6-90" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb6-91" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-cli</span></span>
+<span id="cb6-92" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto GitHub</span></span>
+<span id="cb6-93" class="hljs-ln-code"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> rss</span></span>
+<span id="cb6-94" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://quarto.org/docs/blog/index.xml</span></span>
+<span id="cb6-95" class="hljs-ln-code"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Quarto Blog RSS        </span></span>
+<span id="cb6-96" class="hljs-ln-code"><a></a></span>
+<span id="cb6-97" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
+<span id="cb6-98" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> get-started</span></span>
+<span id="cb6-99" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Get Started"</span></span>
+<span id="cb6-100" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"floating"</span></span>
+<span id="cb6-101" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb6-102" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">align</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb6-103" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-104" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> docs/get-started/index.qmd</span></span>
+<span id="cb6-105" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Hello, Quarto"</span></span>
+<span id="cb6-106" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/hello/</span></span>
+<span id="cb6-107" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Computations"</span></span>
+<span id="cb6-108" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/computations/</span></span>
+<span id="cb6-109" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tutorial: Authoring"</span></span>
+<span id="cb6-110" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/get-started/authoring/</span></span>
+<span id="cb6-111" class="hljs-ln-code"><a></a></span>
+<span id="cb6-112" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> guide</span></span>
+<span id="cb6-113" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb6-114" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-115" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Guide"</span></span>
+<span id="cb6-116" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/guide/index.qmd</span></span>
+<span id="cb6-117" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-118" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Authoring"</span></span>
+<span id="cb6-119" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-120" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/markdown-basics.qmd</span></span>
+<span id="cb6-121" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/figures.qmd</span></span>
+<span id="cb6-122" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/tables.qmd</span></span>
+<span id="cb6-123" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/diagrams.qmd</span></span>
+<span id="cb6-124" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/videos.qmd</span></span>
+<span id="cb6-125" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter Notebooks"</span></span>
+<span id="cb6-126" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/notebook-embed.qmd</span></span>
+<span id="cb6-127" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/callouts.qmd</span></span>
+<span id="cb6-128" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/code-annotation.qmd</span></span>
+<span id="cb6-129" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/article-layout.qmd</span></span>
+<span id="cb6-130" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Scholarly Writing"</span></span>
+<span id="cb6-131" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-132" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/front-matter.qmd</span></span>
+<span id="cb6-133" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/title-blocks.qmd</span></span>
+<span id="cb6-134" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/footnotes-and-citations.qmd</span></span>
+<span id="cb6-135" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/cross-references.qmd</span></span>
+<span id="cb6-136" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/create-citeable-articles.qmd</span></span>
+<span id="cb6-137" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/authoring/appendices.qmd</span></span>
+<span id="cb6-138" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Computations"</span></span>
+<span id="cb6-139" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-140" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/python.qmd</span></span>
+<span id="cb6-141" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/r.qmd</span></span>
+<span id="cb6-142" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/julia.qmd</span></span>
+<span id="cb6-143" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/ojs.qmd</span></span>
+<span id="cb6-144" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/execution-options.qmd</span></span>
+<span id="cb6-145" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/computations/parameters.qmd</span></span>
+<span id="cb6-146" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tools"</span></span>
+<span id="cb6-147" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-148" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab"</span></span>
+<span id="cb6-149" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-150" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab Basics"</span></span>
+<span id="cb6-151" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/jupyter-lab.qmd</span></span>
+<span id="cb6-152" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JupyterLab Extension"</span></span>
+<span id="cb6-153" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/jupyter-lab-extension.qmd</span></span>
+<span id="cb6-154" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"RStudio IDE"</span></span>
+<span id="cb6-155" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-156" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"RStudio Basics"</span></span>
+<span id="cb6-157" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/rstudio.qmd</span></span>
+<span id="cb6-158" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Visual Editor"</span></span>
+<span id="cb6-159" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/index.qmd</span></span>
+<span id="cb6-160" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-161" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Editor Basics</span></span>
+<span id="cb6-162" class="hljs-ln-code"><a></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/index.qmd</span></span>
+<span id="cb6-163" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/technical.qmd</span></span>
+<span id="cb6-164" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/content.qmd</span></span>
+<span id="cb6-165" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/options.qmd</span></span>
+<span id="cb6-166" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/visual-editor/markdown.qmd</span></span>
+<span id="cb6-167" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"VS Code"</span></span>
+<span id="cb6-168" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode.qmd</span></span>
+<span id="cb6-169" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-170" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"VS Code Basics"</span></span>
+<span id="cb6-171" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode.qmd</span></span>
+<span id="cb6-172" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Visual Editor"</span></span>
+<span id="cb6-173" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/visual-editor/vscode/index.qmd</span></span>
+<span id="cb6-174" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Notebook Editor"</span></span>
+<span id="cb6-175" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/tools/vscode-notebook.qmd</span></span>
+<span id="cb6-176" class="hljs-ln-code"><a></a><span class="at">                </span></span>
+<span id="cb6-177" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/tools/neovim.qmd</span></span>
+<span id="cb6-178" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/tools/text-editors.qmd</span></span>
+<span id="cb6-179" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Documents"</span></span>
+<span id="cb6-180" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-181" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"HTML"</span></span>
+<span id="cb6-182" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-183" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-basics.qmd</span></span>
+<span id="cb6-184" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-code.qmd</span></span>
+<span id="cb6-185" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-themes.qmd</span></span>
+<span id="cb6-186" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-multi-format.qmd</span></span>
+<span id="cb6-187" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/html-publishing.qmd</span></span>
+<span id="cb6-188" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF"</span></span>
+<span id="cb6-189" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-190" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/pdf-basics.qmd</span></span>
+<span id="cb6-191" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/pdf-engine.qmd</span></span>
+<span id="cb6-192" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"MS Word"</span></span>
+<span id="cb6-193" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-194" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/ms-word.qmd</span></span>
+<span id="cb6-195" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/ms-word-templates.qmd</span></span>
+<span id="cb6-196" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markdown"</span></span>
+<span id="cb6-197" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-198" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/gfm.qmd</span></span>
+<span id="cb6-199" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/hugo.qmd</span></span>
+<span id="cb6-200" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/output-formats/docusaurus.qmd</span></span>
+<span id="cb6-201" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/output-formats/all-formats.qmd</span></span>
+<span id="cb6-202" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presentations"</span></span>
+<span id="cb6-203" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-204" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb6-205" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/presentations/index.qmd</span></span>
+<span id="cb6-206" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/presentations/revealjs/index.qmd</span></span>
+<span id="cb6-207" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-208" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reveal Basics"</span></span>
+<span id="cb6-209" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/presentations/revealjs/index.qmd</span></span>
+<span id="cb6-210" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/presenting.qmd</span></span>
+<span id="cb6-211" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/advanced.qmd</span></span>
+<span id="cb6-212" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/presentations/revealjs/themes.qmd</span></span>
+<span id="cb6-213" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/presentations/powerpoint.qmd</span></span>
+<span id="cb6-214" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/presentations/beamer.qmd</span></span>
+<span id="cb6-215" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Websites"</span></span>
+<span id="cb6-216" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/websites/website-basics.qmd</span></span>
+<span id="cb6-217" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-218" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-basics.qmd</span></span>
+<span id="cb6-219" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-navigation.qmd</span></span>
+<span id="cb6-220" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-blog.qmd</span></span>
+<span id="cb6-221" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-search.qmd</span></span>
+<span id="cb6-222" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-tools.qmd</span></span>
+<span id="cb6-223" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/websites/website-about.qmd</span></span>
+<span id="cb6-224" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Listing Pages"</span></span>
+<span id="cb6-225" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/websites/website-listings.qmd</span></span>
+<span id="cb6-226" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-227" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/websites/website-listings.qmd</span></span>
+<span id="cb6-228" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/websites/website-listings-custom.qmd</span></span>
+<span id="cb6-229" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Books"</span></span>
+<span id="cb6-230" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/books/book-basics.qmd</span></span>
+<span id="cb6-231" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-232" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-basics.qmd</span></span>
+<span id="cb6-233" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-structure.qmd</span></span>
+<span id="cb6-234" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/books/book-crossrefs.qmd</span></span>
+<span id="cb6-235" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Customizing Output"</span></span>
+<span id="cb6-236" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/books/book-output.qmd</span></span>
+<span id="cb6-237" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Interactivity"</span></span>
+<span id="cb6-238" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-239" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb6-240" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/index.qmd</span></span>
+<span id="cb6-241" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/interactive/ojs/index.qmd</span></span>
+<span id="cb6-242" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-243" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction"</span></span>
+<span id="cb6-244" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/ojs/index.qmd</span></span>
+<span id="cb6-245" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/libraries.qmd</span></span>
+<span id="cb6-246" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/data-sources.qmd</span></span>
+<span id="cb6-247" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/ojs-cells.qmd</span></span>
+<span id="cb6-248" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/shiny.qmd</span></span>
+<span id="cb6-249" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/code-reuse.qmd</span></span>
+<span id="cb6-250" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Examples"</span></span>
+<span id="cb6-251" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-252" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/penguins.qmd</span></span>
+<span id="cb6-253" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/sunburst.qmd</span></span>
+<span id="cb6-254" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/arquero.qmd</span></span>
+<span id="cb6-255" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/population.qmd</span></span>
+<span id="cb6-256" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/noaa-co2.qmd</span></span>
+<span id="cb6-257" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/github.qmd</span></span>
+<span id="cb6-258" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> docs/interactive/ojs/examples/layout.qmd</span></span>
+<span id="cb6-259" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shiny"</span></span>
+<span id="cb6-260" class="hljs-ln-code"><a></a><span class="at">                        </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-261" class="hljs-ln-code"><a></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"K-Means"</span></span>
+<span id="cb6-262" class="hljs-ln-code"><a></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/kmeans-shiny-ojs/</span></span>
+<span id="cb6-263" class="hljs-ln-code"><a></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Binning"</span></span>
+<span id="cb6-264" class="hljs-ln-code"><a></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/binning-shiny-ojs/</span></span>
+<span id="cb6-265" class="hljs-ln-code"><a></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Data Binding"</span></span>
+<span id="cb6-266" class="hljs-ln-code"><a></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/data-shiny-ojs/</span></span>
+<span id="cb6-267" class="hljs-ln-code"><a></a><span class="at">                          </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Covid Map"</span></span>
+<span id="cb6-268" class="hljs-ln-code"><a></a><span class="at">                            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/covid19-bicartogram/</span></span>
+<span id="cb6-269" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/interactive/shiny/index.qmd</span></span>
+<span id="cb6-270" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-271" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction"</span></span>
+<span id="cb6-272" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/interactive/shiny/index.qmd</span></span>
+<span id="cb6-273" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/running.qmd</span></span>
+<span id="cb6-274" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/execution.qmd</span></span>
+<span id="cb6-275" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/shiny/resources.qmd</span></span>
+<span id="cb6-276" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Examples"</span></span>
+<span id="cb6-277" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-278" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Old Faithful"</span></span>
+<span id="cb6-279" class="hljs-ln-code"><a></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-old-faithful/</span></span>
+<span id="cb6-280" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"K-Means"</span></span>
+<span id="cb6-281" class="hljs-ln-code"><a></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-k-means/</span></span>
+<span id="cb6-282" class="hljs-ln-code"><a></a><span class="at">                      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Diamonds"</span></span>
+<span id="cb6-283" class="hljs-ln-code"><a></a><span class="at">                        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://jjallaire.shinyapps.io/shiny-diamonds/</span></span>
+<span id="cb6-284" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Widgets"</span></span>
+<span id="cb6-285" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-286" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/widgets/jupyter.qmd</span></span>
+<span id="cb6-287" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> docs/interactive/widgets/htmlwidgets.qmd</span></span>
+<span id="cb6-288" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/interactive/layout.qmd</span></span>
+<span id="cb6-289" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing"</span></span>
+<span id="cb6-290" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-291" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/index.qmd</span></span>
+<span id="cb6-292" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/quarto-pub.qmd</span></span>
+<span id="cb6-293" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/github-pages.qmd</span></span>
+<span id="cb6-294" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/rstudio-connect.qmd</span></span>
+<span id="cb6-295" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/netlify.qmd</span></span>
+<span id="cb6-296" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/confluence.qmd</span></span>
+<span id="cb6-297" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/publishing/other.qmd</span></span>
+<span id="cb6-298" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing with CI"</span></span>
+<span id="cb6-299" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/publishing/ci.qmd</span></span>
+<span id="cb6-300" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Projects"</span></span>
+<span id="cb6-301" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-302" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/quarto-projects.qmd</span></span>
+<span id="cb6-303" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/code-execution.qmd</span></span>
+<span id="cb6-304" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/profiles.qmd</span></span>
+<span id="cb6-305" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/environment.qmd</span></span>
+<span id="cb6-306" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/scripts.qmd</span></span>
+<span id="cb6-307" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/projects/virtual-environments.qmd</span></span>
+<span id="cb6-308" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced"</span></span>
+<span id="cb6-309" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-310" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/includes.qmd</span></span>
+<span id="cb6-311" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/variables.qmd</span></span>
+<span id="cb6-312" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/output-formats/page-layout.qmd</span></span>
+<span id="cb6-313" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/language.qmd</span></span>
+<span id="cb6-314" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/authoring/conditional.qmd</span></span>
+<span id="cb6-315" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> docs/extensions/nbfilter.qmd</span></span>
+<span id="cb6-316" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> extensions</span></span>
+<span id="cb6-317" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Extensions"</span></span>
+<span id="cb6-318" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-319" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb6-320" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/extensions/index.qmd</span></span>
+<span id="cb6-321" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-322" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shortcodes &amp; Filters"</span></span>
+<span id="cb6-323" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-filters.qmd</span></span>
+<span id="cb6-324" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal Articles"</span></span>
+<span id="cb6-325" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-journals.qmd</span></span>
+<span id="cb6-326" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Custom Formats"</span></span>
+<span id="cb6-327" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-formats.qmd</span></span>
+<span id="cb6-328" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Revealjs Extensions"</span></span>
+<span id="cb6-329" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/listing-revealjs.qmd</span></span>
+<span id="cb6-330" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/managing.qmd</span></span>
+<span id="cb6-331" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb6-332" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> docs/extensions/creating.qmd</span></span>
+<span id="cb6-333" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-334" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
+<span id="cb6-335" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/creating.qmd</span></span>
+<span id="cb6-336" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/lua.qmd</span></span>
+<span id="cb6-337" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/lua-api.qmd</span></span>
+<span id="cb6-338" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Distribution"</span></span>
+<span id="cb6-339" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/distributing.qmd</span></span>
+<span id="cb6-340" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb6-341" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shortcodes"</span></span>
+<span id="cb6-342" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/shortcodes.qmd</span></span>
+<span id="cb6-343" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Filters"</span></span>
+<span id="cb6-344" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/extensions/filters.qmd</span></span>
+<span id="cb6-345" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal Articles"</span></span>
+<span id="cb6-346" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/journals/formats.qmd</span></span>
+<span id="cb6-347" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-348" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/formats.qmd</span></span>
+<span id="cb6-349" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/templates.qmd</span></span>
+<span id="cb6-350" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> docs/journals/authors.qmd</span></span>
+<span id="cb6-351" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/formats.qmd</span></span>
+<span id="cb6-352" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/revealjs.qmd</span></span>
+<span id="cb6-353" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/project-types.qmd</span></span>
+<span id="cb6-354" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> docs/extensions/starter-templates.qmd</span></span>
+<span id="cb6-355" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> manuscripts</span></span>
+<span id="cb6-356" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Manuscripts"</span></span>
+<span id="cb6-357" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"floating"</span></span>
+<span id="cb6-358" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb6-359" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">align</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb6-360" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-361" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Manuscripts Overview</span></span>
+<span id="cb6-362" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/index.qmd</span></span>
+<span id="cb6-363" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Authoring Manuscripts"</span></span>
+<span id="cb6-364" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-365" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Jupyter Lab</span></span>
+<span id="cb6-366" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/jupyterlab.qmd</span></span>
+<span id="cb6-367" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> VS Code</span></span>
+<span id="cb6-368" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/vscode.qmd</span></span>
+<span id="cb6-369" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> RStudio</span></span>
+<span id="cb6-370" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/authoring/rstudio.qmd</span></span>
+<span id="cb6-371" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Publishing Manuscripts"</span></span>
+<span id="cb6-372" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/publishing.qmd</span></span>
+<span id="cb6-373" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Next Steps"</span></span>
+<span id="cb6-374" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/next-steps.qmd</span></span>
+<span id="cb6-375" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb6-376" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Manuscript Components"</span></span>
+<span id="cb6-377" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/manuscripts/components.qmd</span></span>
+<span id="cb6-378" class="hljs-ln-code"><a></a><span class="at">          </span></span>
+<span id="cb6-379" class="hljs-ln-code"><a></a><span class="at">        </span></span>
+<span id="cb6-380" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> reference</span></span>
+<span id="cb6-381" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb6-382" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb6-383" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-384" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reference"</span></span>
+<span id="cb6-385" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/index.qmd</span></span>
+<span id="cb6-386" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-387" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Formats"</span></span>
+<span id="cb6-388" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-389" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"HTML"</span></span>
+<span id="cb6-390" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/html.qmd</span></span>
+<span id="cb6-391" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF"</span></span>
+<span id="cb6-392" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/pdf.qmd</span></span>
+<span id="cb6-393" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"MS Word"</span></span>
+<span id="cb6-394" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/docx.qmd</span></span>
+<span id="cb6-395" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"OpenOffice"</span></span>
+<span id="cb6-396" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/odt.qmd</span></span>
+<span id="cb6-397" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ePub"</span></span>
+<span id="cb6-398" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/epub.qmd</span></span>
+<span id="cb6-399" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presentations"</span></span>
+<span id="cb6-400" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-401" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Revealjs"</span></span>
+<span id="cb6-402" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/revealjs.qmd</span></span>
+<span id="cb6-403" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PowerPoint"</span></span>
+<span id="cb6-404" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/pptx.qmd</span></span>
+<span id="cb6-405" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Beamer"</span></span>
+<span id="cb6-406" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/presentations/beamer.qmd</span></span>
+<span id="cb6-407" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markdown"</span></span>
+<span id="cb6-408" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-409" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"GitHub"</span></span>
+<span id="cb6-410" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/gfm.qmd</span></span>
+<span id="cb6-411" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"CommonMark"</span></span>
+<span id="cb6-412" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/commonmark.qmd</span></span>
+<span id="cb6-413" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Markua"</span></span>
+<span id="cb6-414" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/markdown/markua.qmd</span></span>
+<span id="cb6-415" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Wikis"</span></span>
+<span id="cb6-416" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-417" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"MediaWiki"</span></span>
+<span id="cb6-418" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/mediawiki.qmd</span></span>
+<span id="cb6-419" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"DokuWiki"</span></span>
+<span id="cb6-420" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/dokuwiki.qmd</span></span>
+<span id="cb6-421" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ZimWiki"</span></span>
+<span id="cb6-422" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/zimwiki.qmd</span></span>
+<span id="cb6-423" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jira Wiki"</span></span>
+<span id="cb6-424" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/jira.qmd</span></span>
+<span id="cb6-425" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"XWiki"</span></span>
+<span id="cb6-426" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/wiki/xwiki.qmd</span></span>
+<span id="cb6-427" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"More Formats"</span></span>
+<span id="cb6-428" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-429" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"JATS"</span></span>
+<span id="cb6-430" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/jats.qmd</span></span>
+<span id="cb6-431" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter"</span></span>
+<span id="cb6-432" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/ipynb.qmd</span></span>
+<span id="cb6-433" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"ConTeXt"</span></span>
+<span id="cb6-434" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/context.qmd</span></span>
+<span id="cb6-435" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"RTF"</span></span>
+<span id="cb6-436" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/rtf.qmd</span></span>
+<span id="cb6-437" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"reST"</span></span>
+<span id="cb6-438" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/rst.qmd</span></span>
+<span id="cb6-439" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"AsciiDoc"</span></span>
+<span id="cb6-440" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/asciidoc.qmd</span></span>
+<span id="cb6-441" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Org-Mode"</span></span>
+<span id="cb6-442" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/org.qmd</span></span>
+<span id="cb6-443" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Muse"</span></span>
+<span id="cb6-444" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/muse.qmd</span></span>
+<span id="cb6-445" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"GNU TexInfo"</span></span>
+<span id="cb6-446" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/texinfo.qmd</span></span>
+<span id="cb6-447" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Groff Man Page"</span></span>
+<span id="cb6-448" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/man.qmd</span></span>
+<span id="cb6-449" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Groff Manuscript"</span></span>
+<span id="cb6-450" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/ms.qmd</span></span>
+<span id="cb6-451" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Haddock markup"</span></span>
+<span id="cb6-452" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/haddock.qmd</span></span>
+<span id="cb6-453" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"OPML"</span></span>
+<span id="cb6-454" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/opml.qmd</span></span>
+<span id="cb6-455" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Textile"</span></span>
+<span id="cb6-456" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/textile.qmd</span></span>
+<span id="cb6-457" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"DocBook"</span></span>
+<span id="cb6-458" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/docbook.qmd</span></span>
+<span id="cb6-459" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"InDesign"</span></span>
+<span id="cb6-460" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/icml.qmd</span></span>
+<span id="cb6-461" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"TEI Simple"</span></span>
+<span id="cb6-462" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/tei.qmd</span></span>
+<span id="cb6-463" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"FictionBook"</span></span>
+<span id="cb6-464" class="hljs-ln-code"><a></a><span class="at">                    </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/formats/fb2.qmd</span></span>
+<span id="cb6-465" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Code Cells"</span></span>
+<span id="cb6-466" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/index.qmd</span></span>
+<span id="cb6-467" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-468" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jupyter"</span></span>
+<span id="cb6-469" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-jupyter.qmd</span></span>
+<span id="cb6-470" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Knitr"</span></span>
+<span id="cb6-471" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-knitr.qmd</span></span>
+<span id="cb6-472" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Observable"</span></span>
+<span id="cb6-473" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/cells/cells-ojs.qmd</span></span>
+<span id="cb6-474" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Projects"</span></span>
+<span id="cb6-475" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-476" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Options"</span></span>
+<span id="cb6-477" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/options.qmd</span></span>
+<span id="cb6-478" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Websites"</span></span>
+<span id="cb6-479" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/websites.qmd</span></span>
+<span id="cb6-480" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Books"</span></span>
+<span id="cb6-481" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/projects/books.qmd</span></span>
+<span id="cb6-482" class="hljs-ln-code"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"More"</span></span>
+<span id="cb6-483" class="hljs-ln-code"><a></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-484" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dates"</span></span>
+<span id="cb6-485" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/dates.qmd</span></span>
+<span id="cb6-486" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Globs"</span></span>
+<span id="cb6-487" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/globs.qmd</span></span>
+<span id="cb6-488" class="hljs-ln-code"><a></a><span class="at">              </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Citations"</span></span>
+<span id="cb6-489" class="hljs-ln-code"><a></a><span class="at">                </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/reference/metadata/citation.qmd</span></span>
+<span id="cb6-490" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> prerelease</span></span>
+<span id="cb6-491" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto 1.3"</span></span>
+<span id="cb6-492" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-493" class="hljs-ln-code"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Highlights"</span></span>
+<span id="cb6-494" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/index.qmd</span></span>
+<span id="cb6-495" class="hljs-ln-code"><a></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-496" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Confluence Publishing"</span></span>
+<span id="cb6-497" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/publishing/confluence.qmd</span></span>
+<span id="cb6-498" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Multi-Format"</span></span>
+<span id="cb6-499" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/output-formats/html-multi-format.qmd</span></span>
+<span id="cb6-500" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cell Embedding"</span></span>
+<span id="cb6-501" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/notebook-embed.qmd</span></span>
+<span id="cb6-502" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Grid Customization"</span></span>
+<span id="cb6-503" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/output-formats/page-layout.qmd</span><span class="co">#grid-customization</span></span>
+<span id="cb6-504" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Code Annotation"</span></span>
+<span id="cb6-505" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/code-annotation.qmd</span></span>
+<span id="cb6-506" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto AST"</span></span>
+<span id="cb6-507" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/ast.qmd</span></span>
+<span id="cb6-508" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb6-509" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Callouts</span></span>
+<span id="cb6-510" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/callout.qmd</span></span>
+<span id="cb6-511" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Tabsets</span></span>
+<span id="cb6-512" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/tabset.qmd</span></span>
+<span id="cb6-513" class="hljs-ln-code"><a></a><span class="at">                </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Conditional Blocks</span></span>
+<span id="cb6-514" class="hljs-ln-code"><a></a><span class="at">                  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/custom-ast-nodes/conditional-block.qmd</span></span>
+<span id="cb6-515" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mermaid Theming"</span></span>
+<span id="cb6-516" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/diagrams.qmd</span><span class="co">#mermaid-theming</span></span>
+<span id="cb6-517" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"PDF Images"</span></span>
+<span id="cb6-518" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/prerelease/1.3/pdf.qmd</span></span>
+<span id="cb6-519" class="hljs-ln-code"><a></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"`kbd` Shortcode"</span></span>
+<span id="cb6-520" class="hljs-ln-code"><a></a><span class="at">              </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/authoring/markdown-basics.qmd</span><span class="co">#keyboard-shortcuts</span></span>
+<span id="cb6-521" class="hljs-ln-code"><a></a></span>
+<span id="cb6-522" class="hljs-ln-code"><a></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb6-523" class="hljs-ln-code"><a></a></span>
+<span id="cb6-524" class="hljs-ln-code"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-525" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-526" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-527" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
+<span id="cb6-528" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cosmo</span><span class="kw">,</span><span class="at"> theme.scss</span><span class="kw">]</span></span>
+<span id="cb6-529" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">code-copy</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-530" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">code-overflow</span><span class="kw">:</span><span class="at"> wrap</span></span>
+<span id="cb6-531" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb6-532" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">include-after-body</span><span class="kw">:</span><span class="at"> js.html</span></span>
+<span id="cb6-533" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
+<span id="cb6-534" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">sidebar-width</span><span class="kw">:</span><span class="at"> 250px</span></span>
+<span id="cb6-535" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 900px</span></span>
+<span id="cb6-536" class="hljs-ln-code"><a></a><span class="at">      </span><span class="fu">margin-width</span><span class="kw">:</span><span class="at"> 300px</span></span>
+<span id="cb6-537" class="hljs-ln-code"><a></a></span>
+<span id="cb6-538" class="hljs-ln-code"><a></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb6-539" class="hljs-ln-code"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> filters/tools-tabset.lua</span></span>
+<span id="cb6-540" class="hljs-ln-code"><a></a></span>
+<span id="cb6-541" class="hljs-ln-code"><a></a><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-542" class="hljs-ln-code"><a></a></span>
+<span id="cb6-543" class="hljs-ln-code"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
+<span id="cb6-544" class="hljs-ln-code"><a></a></span>
+<span id="cb6-545" class="hljs-ln-code"><a></a><span class="fu">profile</span><span class="kw">:</span></span>
+<span id="cb6-546" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">group</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-547" class="hljs-ln-code"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">prerelease</span><span class="kw">,</span><span class="at">rc</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quarto-project-vs-rstudio-project" class="slide level2">
+<h2>Quarto Project vs RStudio Project</h2>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<ul>
+<li class="fragment">Quarto Projects determine how <code>quarto render</code>, <code>quarto preview</code> and <code>quarto publish</code> work when run inside the directory.</li>
+<li class="fragment">RStudio Projects store configuration info for the IDE when working from the directory.</li>
+<li class="fragment">A directory can have one or both!</li>
+</ul>
+</div><div class="column fragment fade-left" style="width:50%;">
+<p><br>
+</p>
+<p><img data-src="images/quarto-rstudio-project.png" class="drop" alt="Files panel in RStudio showing my-doc.qmd, _quarto.yml, and an .Rproj file."></p>
+</div></div>
+</section>
+<section id="quarto-projects" class="slide level2">
+<h2>Quarto projects</h2>
+<ul>
+<li><p>Quarto projects have a <code>_quarto.yml</code> file</p></li>
+<li><p>The <code>type</code> field in this file indicates the type of project:</p>
+<ul>
+<li><p><code>default</code>: Collection of documents</p></li>
+<li><p><code>website</code>: Websites (and blogs)</p></li>
+<li><p><code>book</code>: Books</p></li>
+<li><p><code>manuscript</code>: Manuscripts (Quarto 1.4+)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="quarto-websites" class="slide level2">
+<h2>Quarto websites</h2>
+<ul>
+<li><p>Websites are essentially <code>format: html</code> + a Quarto Project file</p></li>
+<li><p>But a website is different than <code>format: html</code> in that it has multiple pages</p></li>
+<li><p>Websites are our first exploration into Quarto Projects</p></li>
+<li><p>Websites and books are very similar in that they associate multiple pages/resources into a connected resource</p></li>
+</ul>
+</section>
+<section id="a-website-in-5-min" class="slide level2 our-turn">
+<h2>A Website in 5 min</h2>
+<p>Use the RStudio IDE to…</p>
+<ol type="1">
+<li>Create New Project &gt; New Directory &gt; Quarto Website</li>
+<li>Build &gt; Render Website (shift-Cmd-B)</li>
+<li>From the terminal: <code>quarto publish</code></li>
+<li>Modify to your heart’s content.</li>
+</ol>
+</section></section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank You</h1>
 

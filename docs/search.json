@@ -749,151 +749,71 @@
     "text": "Let’s take a break\n\n\n\nIntro to Quarto"
   },
   {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#anatomy-of-a-document",
-    "href": "materials/1-single-docs/4-presentations/slides.html#anatomy-of-a-document",
-    "title": "Presentations",
-    "section": "Anatomy of a Document",
-    "text": "Anatomy of a Document\nPresentations, like any Quarto document,\n\nYAML format: revealjs\nMarkdown\nCode cells"
+    "objectID": "materials/1-single-docs/99-parameterized-reports/slides.html#parameterized-reports",
+    "href": "materials/1-single-docs/99-parameterized-reports/slides.html#parameterized-reports",
+    "title": "Extra: Parameterized Reports",
+    "section": "Parameterized Reports",
+    "text": "Parameterized Reports\nUse Case\nYou have a document (pdf, html file, presentation) that you will need to produce many times with only tiny changes.\nApproach\n\nRecode those changes as parameters.\nPass parameters during the render process using a script\n\nShell script\nPython script\nR script"
   },
   {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#toc",
-    "href": "materials/1-single-docs/4-presentations/slides.html#toc",
-    "title": "Presentations",
+    "objectID": "materials/1-single-docs/99-parameterized-reports/slides.html#params-syntax",
+    "href": "materials/1-single-docs/99-parameterized-reports/slides.html#params-syntax",
+    "title": "Extra: Parameterized Reports",
+    "section": "Params syntax",
+    "text": "Params syntax\nPlace parameters in YAML under the params key.\n---\nparams:\n  alpha: 0.1\n  ratio: 0.1\n---\nYou can now access the values inside the params R list.\n\n\n[1] 0.1"
+  },
+  {
+    "objectID": "materials/1-single-docs/99-parameterized-reports/slides.html#our-turn",
+    "href": "materials/1-single-docs/99-parameterized-reports/slides.html#our-turn",
+    "title": "Extra: Parameterized Reports",
     "section": "Our Turn",
-    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd some organization\nReveal on click\nSplit content into columns\nDeal with code more deftly\nAdd logo and footer\nEnable slide annotation"
+    "text": "Our Turn\n\n\nOpen parameterized-reports/grade-report.qmd.\nFilter the data set to only use the data of \"Rohan Prakesh\".\nMake that a variable accessible through params.\nAdd an inline reference to the student.\nRun parameterized-reports/make-grade-reports.r."
   },
   {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#your-turn",
-    "href": "materials/1-single-docs/4-presentations/slides.html#your-turn",
-    "title": "Presentations",
+    "objectID": "materials/1-single-docs/99-parameterized-reports/slides.html#your-turn",
+    "href": "materials/1-single-docs/99-parameterized-reports/slides.html#your-turn",
+    "title": "Extra: Parameterized Reports",
     "section": "Your Turn",
-    "text": "Your Turn\nPick up where we left off and modify then YAML to…\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\nExperiment with different slide background options\n\n\n\n\n−+\n10:00"
+    "text": "Your Turn\nThis one is a real challenge!\n\n\nCreate a second qmd called annual-grade-report.qmd.\nInclude a few plots that show the aggregate grade performance across all students.\nParameterize the report in terms of year.\nModify the code from make-grade-reports.r to produce two grade reports: one for 2023 and one for 2024.\n\n\n\n\n\nIntro to Quarto"
   },
   {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#our-turn",
-    "href": "materials/1-single-docs/4-presentations/slides.html#our-turn",
-    "title": "Presentations",
-    "section": "Our Turn",
-    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd a timer\nPrint to PDF\nPrepare to present\nAdd a theme"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#scss",
-    "href": "materials/1-single-docs/4-presentations/slides.html#scss",
-    "title": "Presentations",
-    "section": "SCSS",
-    "text": "SCSS\n/*-- scss:defaults --*/\n\n// fonts\n$font-family-sans-serif: \"Palatino Linotype\", serif !default;\n\n// colors\n$body-bg: #f0f1eb !default;\n\n// headings\n$presentation-heading-font: \"Palatino Linotype\", serif !default;\n$presentation-heading-color: #383d3d !default;\n\n/*-- scss:rules --*/\n\nblockquote {\n  margin-left: 80px !important;\n}"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#your-turn-1",
-    "href": "materials/1-single-docs/4-presentations/slides.html#your-turn-1",
-    "title": "Presentations",
-    "section": "Your Turn",
-    "text": "Your Turn\nIt’s time to make this presentation really shine. Use SASS variables to\n\nSelect a new theme to use.\nPersonalize your theme by copy-and-pasting the example in the docs into a custom.scss file then…\n\nChanging the background color\nChanging the font size.\n\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#org",
-    "href": "materials/1-single-docs/4-presentations/slides.html#org",
-    "title": "Presentations",
-    "section": "Add some organization",
-    "text": "Add some organization\n\nAdd title slides by starting a slide with # instead of ## (docs).\nPress “o” to see slide overview (docs).\n\n\n Return to Our Turn"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#click",
-    "href": "materials/1-single-docs/4-presentations/slides.html#click",
-    "title": "Presentations",
-    "section": "Reveal on click",
-    "text": "Reveal on click\n\nAdd . . . on a new line to introduce a break in the slide that you can click to advance.\nCan add the .fragment class to any div or span to reveal on click (docs).\nAdd .incremental class to a div outside a list to incrementally reveal list items (docs).\nCan set incremental: true option in yaml under format: revealjs.\nCan create an exception using .nonincremental class on a div.\n\n\n Return to Our Turn"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#cols",
-    "href": "materials/1-single-docs/4-presentations/slides.html#cols",
-    "title": "Presentations",
-    "section": "Split content into columns",
-    "text": "Split content into columns\nNest .column divs inside a .columns div and specify their width (docs)\n:::{.columns}\n\n:::{.column width=\"50%\"}\nHere is the stuff on the left.\n:::\n\n:::{.column width=\"50%\"}\nHere is the stuff on the right.\n:::\n\n:::\n\n Return to Our Turn"
-  },
-  {
-    "objectID": "materials/1-single-docs/4-presentations/slides.html#code",
-    "href": "materials/1-single-docs/4-presentations/slides.html#code",
-    "title": "Presentations",
-    "section": "Deal with code more deftly",
-    "text": "Deal with code more deftly\n\nNaive way: put a code cell in left column with eval: false and a copy of it in the right column with echo: false.\nInstead, try putting both of those code cells in a div with .panel-tabset. Precede each cell block with a level 2 header to serve as the label for each tab.\nBetter yet: remove the tabset and the columns. Add the code cell option.\n```{r}\n#| output-location: column-fragment\n```\nThis will put it in the right column and appear after a click. Read the docs for other good options (docs)\n\n\n Return to Our Turn \n\n\n\n\nIntro to Quarto"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#your-turn",
-    "href": "materials/1-single-docs/3-extensions/slides.html#your-turn",
-    "title": "Intro to Extensions",
-    "section": "Your Turn",
-    "text": "Your Turn\nRefresh your knowledge of markdown by opening quarto-puzzle.qmd and adding five features.\nRender after each change to your document to check your progress!\n\nAdd an author to the yaml.\nConvert “Advanced Quarto” to be a level two header.\nAdd a link to the Quarto website (https://quarto.org/) on the word “Quarto” that appears before the comma in the first sentence.\nTurn the schedule into a bulleted list with 8 items.\nAt the end of the document, insert the image quarto-logo.png found in this directory and make it 150 pixels wide.\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#document-filters",
-    "href": "materials/1-single-docs/3-extensions/slides.html#document-filters",
-    "title": "Intro to Extensions",
-    "section": "Document filters",
-    "text": "Document filters\n\nAdd specific functionality to a document by modifying its structure during the render process.\n\n\n\nThe modification is done by a Lua script."
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#filters-as-a-quarto-extension",
-    "href": "materials/1-single-docs/3-extensions/slides.html#filters-as-a-quarto-extension",
-    "title": "Intro to Extensions",
-    "section": "Filters as a Quarto Extension",
-    "text": "Filters as a Quarto Extension\n\n\n\n\n\nSource: https://quarto.org/docs/extensions/"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#adding-an-extension",
-    "href": "materials/1-single-docs/3-extensions/slides.html#adding-an-extension",
-    "title": "Intro to Extensions",
-    "section": "Adding an Extension",
-    "text": "Adding an Extension\nIn your document directory run at the terminal:\nquarto add &lt; github name &gt;/&lt; repo name &gt;\n\n\nExample\nTo get the quarto-puzzle filter on any doc:\nquarto add qmdr/quarto-puzzle\nthen in the document yaml\n---\nfilters:\n  - quarto-puzzle\n---"
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#shortcodes",
-    "href": "materials/1-single-docs/3-extensions/slides.html#shortcodes",
-    "title": "Intro to Extensions",
-    "section": "Shortcodes",
-    "text": "Shortcodes\n\nA document filter that will inject particular content into your document at the location of your shortcode.\n\nThis is a paragraph in my document.\n\n{{ &lt; shortcode_name arg1 arg2 etc &gt;}}\n\nHere is a nother paragraph after the shortcode."
-  },
-  {
-    "objectID": "materials/1-single-docs/3-extensions/slides.html#your-turn-1",
-    "href": "materials/1-single-docs/3-extensions/slides.html#your-turn-1",
-    "title": "Intro to Extensions",
-    "section": "Your Turn",
-    "text": "Your Turn\nChoose your own extension! Select one of the following shortcode extensions to add to your documents.\n\nFont Awesome\nhttps://github.com/quarto-ext/fontawesome\nQR Code\nhttps://github.com/jmbuhr/quarto-qrcode\n\n\n\n\n−+\n04:00\n\n\n\n\n\n\nIntro to Quarto"
-  },
-  {
-    "objectID": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
-    "href": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
-    "title": "Books",
-    "section": "Anatomy of a Project",
-    "text": "Anatomy of a Project\nbooks, like any project, are defined by _quarto.yml.\nproject:\n  type: book\n\nbook:\n  title: \"mybook\"\n  author: \"Jane Doe\"\n  date: \"8/18/2021\"\n  chapters:\n    - index.qmd\n    - intro.qmd\n    - summary.qmd\n    - references.qmd\n\nbibliography: references.bib\n\nformat:\n  html:\n    theme: cosmo\n  pdf:\n    documentclass: scrreport\n  epub:\n    cover-image: cover.png"
-  },
-  {
-    "objectID": "materials/2-projects/4-books/slides.html#our-turn",
-    "href": "materials/2-projects/4-books/slides.html#our-turn",
-    "title": "Books",
-    "section": "Our Turn",
-    "text": "Our Turn\nLet’s create our first book!\n\nClick into empty-book\nRun quarto create-project --type book\nRun quarto render\nRun quarto publish"
-  },
-  {
-    "objectID": "materials/2-projects/4-books/slides.html#your-turn",
-    "href": "materials/2-projects/4-books/slides.html#your-turn",
-    "title": "Books",
-    "section": "Your Turn",
-    "text": "Your Turn\nLet’s turn the Stat 20 notes into a book.\n\nClick into book.\nRun quarto create-project --type book\nModify _quarto.yml to be sure all notes are added as chapters.\nPublish it! quarto publish\nAdd an icon to your website sidebar\nCreate a crossreference between chapters (add a reference to a figure from chapter 2 in chapter 4.)\n\n\n\n\n−+\n10:00\n\n\n\n\n\n\nIntro to Quarto"
-  },
-  {
-    "objectID": "materials/2-projects/3-slidecraft/index.html",
-    "href": "materials/2-projects/3-slidecraft/index.html",
-    "title": "Advanced Slidecraft",
+    "objectID": "materials/1-single-docs/old-computation/exercises/ex-5.html",
+    "href": "materials/1-single-docs/old-computation/exercises/ex-5.html",
+    "title": "Exercise 5",
     "section": "",
-    "text": "Full Screen"
+    "text": "In this exercise you’ll experiment with code cells in Quarto by creating a short document featuring an analysis of biometric data on penguins from the Palmer Archipelago in Antarctica. Read about the data here: https://allisonhorst.github.io/palmerpenguins/ and load the data frame penguins into R with:\n\nlibrary(palmerpenguins)\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThe tasks below focus on the features of Quarto we’ve been covering, but if you can’t keep your inner data scientist quiet, you’ll welcome to make this a more fully fleshed out analysis with headers, some interpretative text, etc. If you’re familiar with plotting in R, please go ahead and make your own plots. If you’re not, there is plotting code at the bottom of this document that you’re welcome to recycle.\n\nBe sure that all code is echoed to your output document.\nPrint a portion of the penguins data frame into your report. Experiment with the different Quarto print methods but if you’re familiar with table making package in R such at gt and kableExtra, trying giving those a go too.\nCreate a data visualization of some aspect of penguins as a figure that is\n\nis 3 inches wide by 2 inches tall\ncentered\nwith a caption and alt text\nlinks to\n\nCreate two additional data visualizations and place them side-by-side on the same line of the output document. Additionally,\n\nadd captions to each and caption to the whole figure.\nadd references to all three (the sub figures and the whole figure) in a paragraph of text that follows the figure.\n\nCreate one more plot and move into into the right margin.\nThe HTML format has several features that allow users to interact with code. Read about them (https://quarto.org/docs/output-formats/html-code.html) then experiment by adding them to your document (code folding could make sense here).\nMove at least one chunk option from individual cells up to the document YAML.\nUse tab-complete in the IDE to add an obscure chunk option to your chunks.\n\nWhen you’re pleased with your document, please share a screenshot of it on the workshop discussion.\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.3.2\n\nggplot(penguins, aes(x = bill_length_mm,\n                     y = bill_depth_mm,\n                     color = island)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = flipper_length_mm,\n                     fill = species)) +\n  geom_density()\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_density()`)."
   },
   {
-    "objectID": "materials/2-projects/1-docs-to-projects/index.html",
-    "href": "materials/2-projects/1-docs-to-projects/index.html",
-    "title": "From Documents to Projects",
+    "objectID": "materials/2-projects/5-extensions/index.html",
+    "href": "materials/2-projects/5-extensions/index.html",
+    "title": "Extensions",
     "section": "",
-    "text": "Meet your neighbors, familiarize yourself with the structure of the workshop, revisit some Quarto fundamentals, then then stitch together several documents with your first project.\n\nFull Screen"
+    "text": "Quarto is an open-source tool like R and in the same way that you can extend R by writing R packages, you can extend Quarto by writing extensions. We’ll look at two parts of this ecosystem: custom pdfs and Lua filters.\n\nFull Screen"
+  },
+  {
+    "objectID": "materials/2-projects/4-books/index.html",
+    "href": "materials/2-projects/4-books/index.html",
+    "title": "Books",
+    "section": "",
+    "text": "Create your first book, binding together many chapters into a work thats accessible as a pdf or on the web.\n\nFull Screen"
+  },
+  {
+    "objectID": "materials/2-projects/2-websites/index.html",
+    "href": "materials/2-projects/2-websites/index.html",
+    "title": "Websites",
+    "section": "",
+    "text": "While the default project gives us control over our documents, to navigate between them, we need something better: website projects. Learn to link your documents together with a website, explore helpful features, and generate adaptive layouts with listings.\n\nFull Screen"
+  },
+  {
+    "objectID": "materials/1-single-docs/99-parameterized-reports/index.html",
+    "href": "materials/1-single-docs/99-parameterized-reports/index.html",
+    "title": "Extra: Parameterized Reports",
+    "section": "",
+    "text": "Use scripting and render parameterizers to produce tailored documents automatically\n\nFull Screen",
+    "crumbs": [
+      "Intro: Single Docs",
+      "6. Parameterized Reports"
+    ]
   },
   {
     "objectID": "materials/1-single-docs/4-presentations/index.html",
@@ -1006,7 +926,7 @@
     "href": "index.html",
     "title": "Intro to Quarto",
     "section": "",
-    "text": "Intro to Quarto\nA workshop at  posit::conf 2024\n\n\n\n\n\nThese workshops will prepare you to author a rich array of documents in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources.\nSchedule\n\n9-10:30 am Welcome to Quarto\n10:30-11 am Coffee Break\n11-12:30 pm Polishing Documents\n12:30-1:30 pm Lunch\n1:30-2 pm Intro to Extensions\n2-3 pm Presentations\n3-3:30 pm Coffee Break\n3:30-5:00 pm Sharing your Work"
+    "text": "Intro to Quarto\nA workshop at  posit::conf 2024\n\n\n\n\n\nThese workshops will prepare you to author a rich array of documents in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources.\nSchedule\n\n9-10:30 am Welcome to Quarto\n10:30-11 am Coffee Break\n11-12:30 pm Polishing Documents\n12:30-1:30 pm Lunch\n1:30-2 pm Intro to Extensions\n2-3 pm Presentations\n3-3:30 pm Coffee Break\n3:30-5:00 pm Sharing your Work\nIf time: Parameterized Reports"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/images/ex-2.html",
@@ -1058,18 +978,74 @@
     "text": "quarto publish\n\n\n\nAt the Terminal, run:\n\n\n\nquarto publish &lt;document&gt;"
   },
   {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#custom-formats-1",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#custom-formats-1",
+    "title": "Sharing Your Work",
+    "section": "Custom Formats",
+    "text": "Custom Formats\nCustom Formats (aka Templates) are a way to bundle fonts, images, logos, filters, formatting, and metadata for use by others.\n\nInstall a custom format\n\nquarto add &lt;githubname&gt;/&lt;reponame&gt; to install the format\nquarto use template &lt;githubname&gt;/&lt;reponame&gt; to install the format with a sample qmd file.\n\n\n\nUse the custom format\nSet format: &lt;extentionname&gt;-&lt;baseformat&gt;. Example:\nformat: qmdrslides-revealjs"
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn-custom-revealjs",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn-custom-revealjs",
+    "title": "Sharing Your Work",
+    "section": "Our Turn: Custom Revealjs",
+    "text": "Our Turn: Custom Revealjs\n\nIn the same directory as your slide deck, run at the terminal:\nquarto add qmdr/qmdrslides\nChange your document yaml to use format: qmdrslides-revealjs"
+  },
+  {
     "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn",
     "href": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn",
     "title": "Sharing Your Work",
     "section": "Our Turn",
-    "text": "Our Turn\nLet’s"
+    "text": "Our Turn\nLet’s prepare an article to submit to the Journal of Statistical Software.\n\nAt the Terminal.\nquarto use template quarto-journals/jss\nRender.\nModify to your hearts content."
   },
   {
-    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn-1",
-    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#our-turn-1",
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#what-defines-a-quarto-project",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#what-defines-a-quarto-project",
     "title": "Sharing Your Work",
-    "section": "Our Turn",
-    "text": "Our Turn\nLet’s prepare an article to submit to the Journal of Statistical Software.\n\nAt the Terminal.\nquarto use template quarto-journals/jss\nRender.\nModify to your hearts content."
+    "section": "What defines a Quarto Project?",
+    "text": "What defines a Quarto Project?\n\n\nA Quarto Project is a directory that contains a file called _quarto.yml.\n\n\n\n\n\n\nThis is a Quarto Project.\n\n\nThis is not."
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto.yml",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto.yml",
+    "title": "Sharing Your Work",
+    "section": "_quarto.yml",
+    "text": "_quarto.yml\nA YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.\n\n\n_quarto.yml\n\nproject:\n  title: \"A Barebones Project\""
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto.yml-1",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto.yml-1",
+    "title": "Sharing Your Work",
+    "section": "_quarto.yml",
+    "text": "_quarto.yml\nA YAML file with particular keys and values that Quarto recognizes. Unrecognized keys are ignored.\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: _site\n  resources:\n    - \"/docs/download/_download.json\"\n    - \"/docs/download/_prerelease.json\"\n    - \"/_redirects\"\n\nwebsite:\n  title: \"Quarto\"\n  image: \"quarto-dark-bg.jpeg\"\n  favicon: \"favicon.png\"\n  google-analytics: \"G-FV9Z7SDZ0M\"\n  open-graph: true\n  twitter-card: true\n  site-url: https://quarto.org\n  repo-url: https://github.com/quarto-dev/quarto-web\n  issue-url: https://github.com/quarto-dev/quarto-cli/issues/new/choose\n  repo-actions: [edit, issue]\n  page-navigation: true\n  bread-crumbs: true\n  search:\n    show-item-context: true\n    type: overlay\n    algolia:\n      index-name: prod_QUARTO\n      application-id: ZPJB5I1QN7\n      search-only-api-key: 41be6c1e0a7fea4a51b107810facf577\n      analytics-events: true\n      show-logo: true\n  page-footer:\n    left: |\n      Proudly supported by\n      [![](https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg){fig-alt=\"Posit\" width=65px}](https://posit.co)\n    center:\n      - text: \"About\"\n        href: about.qmd\n      - text: \"FAQ\"\n        href: docs/faq/index.qmd\n      - text: \"License\"\n        href: license.qmd\n      - text: \"Trademark\"\n        href: trademark.qmd\n    right:\n      - icon: twitter\n        href: https://twitter.com/quarto_pub\n        aria-label: Quarto Twitter\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        aria-label: Quarto GitHub\n      - icon: rss\n        href: https://quarto.org/docs/blog/index.xml\n        aria-label: Quarto Blog RSS        \n  navbar:\n    background: light\n    logo: quarto.png\n    logo-alt: \"Quarto logo.\"\n    title: false\n    collapse-below: lg\n    left:\n      - text: \"Overview\"\n        href: index.qmd\n      - text: \"Get Started\"\n        href: docs/get-started/index.qmd\n      - text: \"Guide\"\n        href: docs/guide/index.qmd\n      - text: Extensions\n        href: docs/extensions/index.qmd\n      - text: \"Reference\"\n        href: docs/reference/index.qmd\n      - text: \"Gallery\"\n        href: docs/gallery/index.qmd\n      - text: \"Blog\"\n        href: docs/blog/index.qmd\n      - text: \"Help\"\n        menu:\n          - text: \"Report a Bug\"\n            icon: \"bug\"\n            href: \"https://github.com/quarto-dev/quarto-cli/issues\"\n          - text: \"Ask a Question\"\n            icon: \"chat-right-text\"\n            href: \"https://github.com/quarto-dev/quarto-cli/discussions\"\n          - text: \"FAQ\"\n            icon: \"question-circle\"\n            href: docs/faq/index.qmd\n    tools:\n      - icon: twitter\n        href: https://twitter.com/quarto_pub\n        text: Quarto Twitter\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        text: Quarto GitHub\n      - icon: rss\n        href: https://quarto.org/docs/blog/index.xml\n        text: Quarto Blog RSS        \n\n  sidebar:\n    - id: get-started\n      title: \"Get Started\"\n      style: \"floating\"\n      collapse-level: 2\n      align: left\n      contents:\n        - docs/get-started/index.qmd\n        - text: \"Tutorial: Hello, Quarto\"\n          href: docs/get-started/hello/\n        - text: \"Tutorial: Computations\"\n          href: docs/get-started/computations/\n        - text: \"Tutorial: Authoring\"\n          href: docs/get-started/authoring/\n\n    - id: guide\n      collapse-level: 1\n      contents:\n        - section: \"Guide\"\n          href: docs/guide/index.qmd\n          contents:\n          - section: \"Authoring\"\n            contents:\n              - docs/authoring/markdown-basics.qmd\n              - docs/authoring/figures.qmd\n              - docs/authoring/tables.qmd\n              - docs/authoring/diagrams.qmd\n              - docs/authoring/videos.qmd\n              - text: \"Jupyter Notebooks\"\n                href: docs/authoring/notebook-embed.qmd\n              - docs/authoring/callouts.qmd\n              - docs/authoring/code-annotation.qmd\n              - docs/authoring/article-layout.qmd\n              - section: \"Scholarly Writing\"\n                contents:\n                  - docs/authoring/front-matter.qmd\n                  - docs/authoring/title-blocks.qmd\n                  - docs/authoring/footnotes-and-citations.qmd\n                  - docs/authoring/cross-references.qmd\n                  - docs/authoring/create-citeable-articles.qmd\n                  - docs/authoring/appendices.qmd\n          - section: \"Computations\"\n            contents:\n              - docs/computations/python.qmd\n              - docs/computations/r.qmd\n              - docs/computations/julia.qmd\n              - docs/computations/ojs.qmd\n              - docs/computations/execution-options.qmd\n              - docs/computations/parameters.qmd\n          - section: \"Tools\"\n            contents:\n              - section: \"JupyterLab\"\n                contents:\n                  - text: \"JupyterLab Basics\"\n                    href: docs/tools/jupyter-lab.qmd\n                  - text: \"JupyterLab Extension\"\n                    href: docs/tools/jupyter-lab-extension.qmd\n              - section: \"RStudio IDE\"\n                contents: \n                  - text: \"RStudio Basics\"\n                    href: docs/tools/rstudio.qmd\n                  - section: \"Visual Editor\"\n                    href: docs/visual-editor/index.qmd\n                    contents:\n                      - text: Editor Basics\n                        href: docs/visual-editor/index.qmd\n                      - docs/visual-editor/technical.qmd\n                      - docs/visual-editor/content.qmd\n                      - docs/visual-editor/options.qmd\n                      - docs/visual-editor/markdown.qmd\n              - section: \"VS Code\"\n                href: docs/tools/vscode.qmd\n                contents:\n                  - text: \"VS Code Basics\"\n                    href: docs/tools/vscode.qmd\n                  - text: \"Visual Editor\"\n                    href: docs/visual-editor/vscode/index.qmd\n                  - text: \"Notebook Editor\"\n                    href: docs/tools/vscode-notebook.qmd\n                \n              - docs/tools/neovim.qmd\n              - docs/tools/text-editors.qmd\n          - section: \"Documents\"\n            contents:\n              - section: \"HTML\"\n                contents:\n                  - docs/output-formats/html-basics.qmd\n                  - docs/output-formats/html-code.qmd\n                  - docs/output-formats/html-themes.qmd\n                  - docs/output-formats/html-multi-format.qmd\n                  - docs/output-formats/html-publishing.qmd\n              - section: \"PDF\"\n                contents:\n                  - docs/output-formats/pdf-basics.qmd\n                  - docs/output-formats/pdf-engine.qmd\n              - section: \"MS Word\"\n                contents:\n                  - docs/output-formats/ms-word.qmd\n                  - docs/output-formats/ms-word-templates.qmd\n              - section: \"Markdown\"\n                contents:\n                  - docs/output-formats/gfm.qmd\n                  - docs/output-formats/hugo.qmd\n                  - docs/output-formats/docusaurus.qmd\n              - docs/output-formats/all-formats.qmd\n          - section: \"Presentations\"\n            contents:\n              - text: \"Overview\"\n                href: docs/presentations/index.qmd\n              - section: docs/presentations/revealjs/index.qmd\n                contents:\n                  - text: \"Reveal Basics\"\n                    href: docs/presentations/revealjs/index.qmd\n                  - docs/presentations/revealjs/presenting.qmd\n                  - docs/presentations/revealjs/advanced.qmd\n                  - docs/presentations/revealjs/themes.qmd\n              - docs/presentations/powerpoint.qmd\n              - docs/presentations/beamer.qmd\n          - section: \"Websites\"\n            href: docs/websites/website-basics.qmd\n            contents:\n              - docs/websites/website-basics.qmd\n              - docs/websites/website-navigation.qmd\n              - docs/websites/website-blog.qmd\n              - docs/websites/website-search.qmd\n              - docs/websites/website-tools.qmd\n              - docs/websites/website-about.qmd\n              - section: \"Listing Pages\"\n                href: docs/websites/website-listings.qmd\n                contents:\n                  - docs/websites/website-listings.qmd\n                  - docs/websites/website-listings-custom.qmd\n          - section: \"Books\"\n            href: docs/books/book-basics.qmd\n            contents:\n              - docs/books/book-basics.qmd\n              - docs/books/book-structure.qmd\n              - docs/books/book-crossrefs.qmd\n              - text: \"Customizing Output\"\n                href: docs/books/book-output.qmd\n          - section: \"Interactivity\"\n            contents:\n              - text: \"Overview\"\n                href: docs/interactive/index.qmd\n              - section: docs/interactive/ojs/index.qmd\n                contents:\n                  - text: \"Introduction\"\n                    href: docs/interactive/ojs/index.qmd\n                  - docs/interactive/ojs/libraries.qmd\n                  - docs/interactive/ojs/data-sources.qmd\n                  - docs/interactive/ojs/ojs-cells.qmd\n                  - docs/interactive/ojs/shiny.qmd\n                  - docs/interactive/ojs/code-reuse.qmd\n                  - section: \"Examples\"\n                    contents:\n                      - docs/interactive/ojs/examples/penguins.qmd\n                      - docs/interactive/ojs/examples/sunburst.qmd\n                      - docs/interactive/ojs/examples/arquero.qmd\n                      - docs/interactive/ojs/examples/population.qmd\n                      - docs/interactive/ojs/examples/noaa-co2.qmd\n                      - docs/interactive/ojs/examples/github.qmd\n                      - docs/interactive/ojs/examples/layout.qmd\n                      - section: \"Shiny\"\n                        contents:\n                          - text: \"K-Means\"\n                            href: https://jjallaire.shinyapps.io/kmeans-shiny-ojs/\n                          - text: \"Binning\"\n                            href: https://jjallaire.shinyapps.io/binning-shiny-ojs/\n                          - text: \"Data Binding\"\n                            href: https://jjallaire.shinyapps.io/data-shiny-ojs/\n                          - text: \"Covid Map\"\n                            href: https://jjallaire.shinyapps.io/covid19-bicartogram/\n              - section: docs/interactive/shiny/index.qmd\n                contents:\n                  - text: \"Introduction\"\n                    href: docs/interactive/shiny/index.qmd\n                  - docs/interactive/shiny/running.qmd\n                  - docs/interactive/shiny/execution.qmd\n                  - docs/interactive/shiny/resources.qmd\n                  - section: \"Examples\"\n                    contents:\n                      - text: \"Old Faithful\"\n                        href: https://jjallaire.shinyapps.io/shiny-old-faithful/\n                      - text: \"K-Means\"\n                        href: https://jjallaire.shinyapps.io/shiny-k-means/\n                      - text: \"Diamonds\"\n                        href: https://jjallaire.shinyapps.io/shiny-diamonds/\n              - section: \"Widgets\"\n                contents:\n                  - docs/interactive/widgets/jupyter.qmd\n                  - docs/interactive/widgets/htmlwidgets.qmd\n              - docs/interactive/layout.qmd\n          - section: \"Publishing\"\n            contents:\n              - docs/publishing/index.qmd\n              - docs/publishing/quarto-pub.qmd\n              - docs/publishing/github-pages.qmd\n              - docs/publishing/rstudio-connect.qmd\n              - docs/publishing/netlify.qmd\n              - docs/publishing/confluence.qmd\n              - docs/publishing/other.qmd\n              - text: \"Publishing with CI\"\n                href: docs/publishing/ci.qmd\n          - section: \"Projects\"\n            contents:\n              - docs/projects/quarto-projects.qmd\n              - docs/projects/code-execution.qmd\n              - docs/projects/profiles.qmd\n              - docs/projects/environment.qmd\n              - docs/projects/scripts.qmd\n              - docs/projects/virtual-environments.qmd\n          - section: \"Advanced\"\n            contents:\n              - docs/authoring/includes.qmd\n              - docs/authoring/variables.qmd\n              - docs/output-formats/page-layout.qmd\n              - docs/authoring/language.qmd\n              - docs/authoring/conditional.qmd\n              - docs/extensions/nbfilter.qmd\n    - id: extensions\n      title: \"Extensions\"\n      contents:\n        - \"---\"\n        - section: docs/extensions/index.qmd\n          contents: \n            - text: \"Shortcodes & Filters\"\n              href: docs/extensions/listing-filters.qmd\n            - text: \"Journal Articles\"\n              href: docs/extensions/listing-journals.qmd\n            - text: \"Custom Formats\"\n              href: docs/extensions/listing-formats.qmd\n            - text: \"Revealjs Extensions\"\n              href: docs/extensions/listing-revealjs.qmd\n            - docs/extensions/managing.qmd\n        - \"---\"\n        - section: docs/extensions/creating.qmd\n          contents:\n            - text: \"Overview\"\n              href: docs/extensions/creating.qmd\n            - docs/extensions/lua.qmd\n            - docs/extensions/lua-api.qmd\n            - text: \"Distribution\"\n              href: docs/extensions/distributing.qmd\n            - \"---\"\n            - text: \"Shortcodes\"\n              href: docs/extensions/shortcodes.qmd\n            - text: \"Filters\"\n              href: docs/extensions/filters.qmd\n            - section: \"Journal Articles\"\n              href: docs/journals/formats.qmd\n              contents:\n                - docs/journals/formats.qmd\n                - docs/journals/templates.qmd\n                - docs/journals/authors.qmd\n            - docs/extensions/formats.qmd\n            - docs/extensions/revealjs.qmd\n            - docs/extensions/project-types.qmd\n            - docs/extensions/starter-templates.qmd\n    - id: manuscripts\n      title: \"Manuscripts\"\n      style: \"floating\"\n      collapse-level: 2\n      align: left\n      contents:\n        - text: Manuscripts Overview\n          href: docs/manuscripts/index.qmd\n        - text: \"Authoring Manuscripts\"\n          contents: \n            - text: Jupyter Lab\n              href: docs/manuscripts/authoring/jupyterlab.qmd\n            - text: VS Code\n              href: docs/manuscripts/authoring/vscode.qmd\n            - text: RStudio\n              href: docs/manuscripts/authoring/rstudio.qmd\n        - text: \"Publishing Manuscripts\"\n          href: docs/manuscripts/publishing.qmd\n        - text: \"Next Steps\"\n          href: docs/manuscripts/next-steps.qmd\n        - text: \"---\"\n        - text: \"Manuscript Components\"\n          href: docs/manuscripts/components.qmd\n          \n        \n    - id: reference\n      title: \"Reference\"\n      collapse-level: 3\n      contents:\n        - section: \"Reference\"\n          href: docs/reference/index.qmd\n          contents:\n          - section: \"Formats\"\n            contents:\n              - text: \"HTML\"\n                href: docs/reference/formats/html.qmd\n              - text: \"PDF\"\n                href: docs/reference/formats/pdf.qmd\n              - text: \"MS Word\"\n                href: docs/reference/formats/docx.qmd\n              - text: \"OpenOffice\"\n                href: docs/reference/formats/odt.qmd\n              - text: \"ePub\"\n                href: docs/reference/formats/epub.qmd\n              - section: \"Presentations\"\n                contents:\n                  - text: \"Revealjs\"\n                    href: docs/reference/formats/presentations/revealjs.qmd\n                  - text: \"PowerPoint\"\n                    href: docs/reference/formats/presentations/pptx.qmd\n                  - text: \"Beamer\"\n                    href: docs/reference/formats/presentations/beamer.qmd\n              - section: \"Markdown\"\n                contents:\n                  - text: \"GitHub\"\n                    href: docs/reference/formats/markdown/gfm.qmd\n                  - text: \"CommonMark\"\n                    href: docs/reference/formats/markdown/commonmark.qmd\n                  - text: \"Markua\"\n                    href: docs/reference/formats/markdown/markua.qmd\n              - section: \"Wikis\"\n                contents:\n                  - text: \"MediaWiki\"\n                    href: docs/reference/formats/wiki/mediawiki.qmd\n                  - text: \"DokuWiki\"\n                    href: docs/reference/formats/wiki/dokuwiki.qmd\n                  - text: \"ZimWiki\"\n                    href: docs/reference/formats/wiki/zimwiki.qmd\n                  - text: \"Jira Wiki\"\n                    href: docs/reference/formats/wiki/jira.qmd\n                  - text: \"XWiki\"\n                    href: docs/reference/formats/wiki/xwiki.qmd\n              - section: \"More Formats\"\n                contents:\n                  - text: \"JATS\"\n                    href: docs/reference/formats/jats.qmd\n                  - text: \"Jupyter\"\n                    href: docs/reference/formats/ipynb.qmd\n                  - text: \"ConTeXt\"\n                    href: docs/reference/formats/context.qmd\n                  - text: \"RTF\"\n                    href: docs/reference/formats/rtf.qmd\n                  - text: \"reST\"\n                    href: docs/reference/formats/rst.qmd\n                  - text: \"AsciiDoc\"\n                    href: docs/reference/formats/asciidoc.qmd\n                  - text: \"Org-Mode\"\n                    href: docs/reference/formats/org.qmd\n                  - text: \"Muse\"\n                    href: docs/reference/formats/muse.qmd\n                  - text: \"GNU TexInfo\"\n                    href: docs/reference/formats/texinfo.qmd\n                  - text: \"Groff Man Page\"\n                    href: docs/reference/formats/man.qmd\n                  - text: \"Groff Manuscript\"\n                    href: docs/reference/formats/ms.qmd\n                  - text: \"Haddock markup\"\n                    href: docs/reference/formats/haddock.qmd\n                  - text: \"OPML\"\n                    href: docs/reference/formats/opml.qmd\n                  - text: \"Textile\"\n                    href: docs/reference/formats/textile.qmd\n                  - text: \"DocBook\"\n                    href: docs/reference/formats/docbook.qmd\n                  - text: \"InDesign\"\n                    href: docs/reference/formats/icml.qmd\n                  - text: \"TEI Simple\"\n                    href: docs/reference/formats/tei.qmd\n                  - text: \"FictionBook\"\n                    href: docs/reference/formats/fb2.qmd\n          - section: \"Code Cells\"\n            href: docs/reference/cells/index.qmd\n            contents:\n              - text: \"Jupyter\"\n                href: docs/reference/cells/cells-jupyter.qmd\n              - text: \"Knitr\"\n                href: docs/reference/cells/cells-knitr.qmd\n              - text: \"Observable\"\n                href: docs/reference/cells/cells-ojs.qmd\n          - section: \"Projects\"\n            contents:\n              - text: \"Options\"\n                href: docs/reference/projects/options.qmd\n              - text: \"Websites\"\n                href: docs/reference/projects/websites.qmd\n              - text: \"Books\"\n                href: docs/reference/projects/books.qmd\n          - section: \"More\"\n            contents:\n              - text: \"Dates\"\n                href: docs/reference/dates.qmd\n              - text: \"Globs\"\n                href: docs/reference/globs.qmd\n              - text: \"Citations\"\n                href: docs/reference/metadata/citation.qmd\n    - id: prerelease\n      title: \"Quarto 1.3\"\n      contents:\n        - section: \"Highlights\"\n          href: docs/prerelease/1.3/index.qmd\n          contents:\n            - text: \"Confluence Publishing\"\n              href: docs/publishing/confluence.qmd\n            - text: \"Multi-Format\"\n              href: docs/output-formats/html-multi-format.qmd\n            - text: \"Cell Embedding\"\n              href: docs/authoring/notebook-embed.qmd\n            - text: \"Grid Customization\"\n              href: docs/output-formats/page-layout.qmd#grid-customization\n            - text: \"Code Annotation\"\n              href: docs/authoring/code-annotation.qmd\n            - section: \"Quarto AST\"\n              href: docs/prerelease/1.3/ast.qmd\n              contents:\n                - text: Callouts\n                  href: docs/prerelease/1.3/custom-ast-nodes/callout.qmd\n                - text: Tabsets\n                  href: docs/prerelease/1.3/custom-ast-nodes/tabset.qmd\n                - text: Conditional Blocks\n                  href: docs/prerelease/1.3/custom-ast-nodes/conditional-block.qmd\n            - text: \"Mermaid Theming\"\n              href: docs/authoring/diagrams.qmd#mermaid-theming\n            - text: \"PDF Images\"\n              href: docs/prerelease/1.3/pdf.qmd\n            - text: \"`kbd` Shortcode\"\n              href: docs/authoring/markdown-basics.qmd#keyboard-shortcuts\n\nbibliography: references.bib\n\nformat:\n  html:\n    toc: true\n    theme:\n      light: [cosmo, theme.scss]\n    code-copy: true\n    code-overflow: wrap\n    css: styles.css\n    include-after-body: js.html\n    grid:\n      sidebar-width: 250px\n      body-width: 900px\n      margin-width: 300px\n\nfilters:\n  - filters/tools-tabset.lua\n\nfreeze: true\n\neditor: visual\n\nprofile:\n  group: \n    - [prerelease,rc]"
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-project-vs-rstudio-project",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-project-vs-rstudio-project",
+    "title": "Sharing Your Work",
+    "section": "Quarto Project vs RStudio Project",
+    "text": "Quarto Project vs RStudio Project\n\n\n\nQuarto Projects determine how quarto render, quarto preview and quarto publish work when run inside the directory.\nRStudio Projects store configuration info for the IDE when working from the directory.\nA directory can have one or both!"
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-projects",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-projects",
+    "title": "Sharing Your Work",
+    "section": "Quarto projects",
+    "text": "Quarto projects\n\nQuarto projects have a _quarto.yml file\nThe type field in this file indicates the type of project:\n\ndefault: Collection of documents\nwebsite: Websites (and blogs)\nbook: Books\nmanuscript: Manuscripts (Quarto 1.4+)"
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-websites",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#quarto-websites",
+    "title": "Sharing Your Work",
+    "section": "Quarto websites",
+    "text": "Quarto websites\n\nWebsites are essentially format: html + a Quarto Project file\nBut a website is different than format: html in that it has multiple pages\nWebsites are our first exploration into Quarto Projects\nWebsites and books are very similar in that they associate multiple pages/resources into a connected resource"
+  },
+  {
+    "objectID": "materials/1-single-docs/5-sharing-your-work/slides.html#a-website-in-5-min",
+    "href": "materials/1-single-docs/5-sharing-your-work/slides.html#a-website-in-5-min",
+    "title": "Sharing Your Work",
+    "section": "A Website in 5 min",
+    "text": "A Website in 5 min\nUse the RStudio IDE to…\n\nCreate New Project &gt; New Directory &gt; Quarto Website\nBuild &gt; Render Website (shift-Cmd-B)\nFrom the terminal: quarto publish\nModify to your heart’s content."
   },
   {
     "objectID": "materials/1-single-docs/old-polishing-documents/exercises/ex-3.html",
@@ -1489,7 +1465,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/index.html",
     "title": "Welcome to Quarto",
     "section": "",
-    "text": "Meet your neighbors, familiarize yourself with the format of the workshop, practing rendering documents with Quarto, and build a sense of the three components that make up the anatomy of a Quarto document.\n\nFull Screen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMorning Exercises\n```{r}\nusethis::use_course(\"https://github.com/qmdr/intro-quarto-morning/archive/refs/heads/master.zip\")\n```",
+    "text": "Meet your neighbors, familiarize yourself with the format of the workshop, practing rendering documents with Quarto, and build a sense of the three components that make up the anatomy of a Quarto document.\n\nFull Screen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMorning Exercises\nusethis::use_course(\"https://github.com/qmdr/intro-quarto-morning/archive/refs/heads/master.zip\")",
     "crumbs": [
       "Intro: Single Docs",
       "1. Welcome to Quarto"
@@ -1500,7 +1476,7 @@
     "href": "materials/1-single-docs/3-extensions/index.html",
     "title": "Intro to Extensions",
     "section": "",
-    "text": "Test your new found knowledge of Markdown and explore the power of document filters and shortcodes.\n\nFull Screen\n\n\nAfternoon Exercises\n```{r}\nusethis::use_course(\"https://github.com/qmdr/intro-quarto-afternoon/archive/refs/heads/master.zip\")\n```",
+    "text": "Test your new found knowledge of Markdown and explore the power of document filters and shortcodes.\n\nFull Screen\n\n\nAfternoon Exercises\nusethis::use_course(\"https://github.com/qmdr/intro-quarto-afternoon/archive/refs/heads/master.zip\")",
     "crumbs": [
       "Intro: Single Docs",
       "3. Intro to Extensions"
@@ -1518,32 +1494,158 @@
     ]
   },
   {
-    "objectID": "materials/2-projects/2-websites/index.html",
-    "href": "materials/2-projects/2-websites/index.html",
-    "title": "Websites",
+    "objectID": "materials/2-projects/1-docs-to-projects/index.html",
+    "href": "materials/2-projects/1-docs-to-projects/index.html",
+    "title": "From Documents to Projects",
     "section": "",
-    "text": "While the default project gives us control over our documents, to navigate between them, we need something better: website projects. Learn to link your documents together with a website, explore helpful features, and generate adaptive layouts with listings.\n\nFull Screen"
+    "text": "Meet your neighbors, familiarize yourself with the structure of the workshop, revisit some Quarto fundamentals, then then stitch together several documents with your first project.\n\nFull Screen"
   },
   {
-    "objectID": "materials/2-projects/4-books/index.html",
-    "href": "materials/2-projects/4-books/index.html",
+    "objectID": "materials/2-projects/3-slidecraft/index.html",
+    "href": "materials/2-projects/3-slidecraft/index.html",
+    "title": "Advanced Slidecraft",
+    "section": "",
+    "text": "Full Screen"
+  },
+  {
+    "objectID": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
+    "href": "materials/2-projects/4-books/slides.html#anatomy-of-a-project",
     "title": "Books",
-    "section": "",
-    "text": "Create your first book, binding together many chapters into a work thats accessible as a pdf or on the web.\n\nFull Screen"
+    "section": "Anatomy of a Project",
+    "text": "Anatomy of a Project\nbooks, like any project, are defined by _quarto.yml.\nproject:\n  type: book\n\nbook:\n  title: \"mybook\"\n  author: \"Jane Doe\"\n  date: \"8/18/2021\"\n  chapters:\n    - index.qmd\n    - intro.qmd\n    - summary.qmd\n    - references.qmd\n\nbibliography: references.bib\n\nformat:\n  html:\n    theme: cosmo\n  pdf:\n    documentclass: scrreport\n  epub:\n    cover-image: cover.png"
   },
   {
-    "objectID": "materials/2-projects/5-extensions/index.html",
-    "href": "materials/2-projects/5-extensions/index.html",
-    "title": "Extensions",
-    "section": "",
-    "text": "Quarto is an open-source tool like R and in the same way that you can extend R by writing R packages, you can extend Quarto by writing extensions. We’ll look at two parts of this ecosystem: custom pdfs and Lua filters.\n\nFull Screen"
+    "objectID": "materials/2-projects/4-books/slides.html#our-turn",
+    "href": "materials/2-projects/4-books/slides.html#our-turn",
+    "title": "Books",
+    "section": "Our Turn",
+    "text": "Our Turn\nLet’s create our first book!\n\nClick into empty-book\nRun quarto create-project --type book\nRun quarto render\nRun quarto publish"
   },
   {
-    "objectID": "materials/1-single-docs/old-computation/exercises/ex-5.html",
-    "href": "materials/1-single-docs/old-computation/exercises/ex-5.html",
-    "title": "Exercise 5",
-    "section": "",
-    "text": "In this exercise you’ll experiment with code cells in Quarto by creating a short document featuring an analysis of biometric data on penguins from the Palmer Archipelago in Antarctica. Read about the data here: https://allisonhorst.github.io/palmerpenguins/ and load the data frame penguins into R with:\n\nlibrary(palmerpenguins)\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThe tasks below focus on the features of Quarto we’ve been covering, but if you can’t keep your inner data scientist quiet, you’ll welcome to make this a more fully fleshed out analysis with headers, some interpretative text, etc. If you’re familiar with plotting in R, please go ahead and make your own plots. If you’re not, there is plotting code at the bottom of this document that you’re welcome to recycle.\n\nBe sure that all code is echoed to your output document.\nPrint a portion of the penguins data frame into your report. Experiment with the different Quarto print methods but if you’re familiar with table making package in R such at gt and kableExtra, trying giving those a go too.\nCreate a data visualization of some aspect of penguins as a figure that is\n\nis 3 inches wide by 2 inches tall\ncentered\nwith a caption and alt text\nlinks to\n\nCreate two additional data visualizations and place them side-by-side on the same line of the output document. Additionally,\n\nadd captions to each and caption to the whole figure.\nadd references to all three (the sub figures and the whole figure) in a paragraph of text that follows the figure.\n\nCreate one more plot and move into into the right margin.\nThe HTML format has several features that allow users to interact with code. Read about them (https://quarto.org/docs/output-formats/html-code.html) then experiment by adding them to your document (code folding could make sense here).\nMove at least one chunk option from individual cells up to the document YAML.\nUse tab-complete in the IDE to add an obscure chunk option to your chunks.\n\nWhen you’re pleased with your document, please share a screenshot of it on the workshop discussion.\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.3.2\n\nggplot(penguins, aes(x = bill_length_mm,\n                     y = bill_depth_mm,\n                     color = island)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = flipper_length_mm,\n                     fill = species)) +\n  geom_density()\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_density()`)."
+    "objectID": "materials/2-projects/4-books/slides.html#your-turn",
+    "href": "materials/2-projects/4-books/slides.html#your-turn",
+    "title": "Books",
+    "section": "Your Turn",
+    "text": "Your Turn\nLet’s turn the Stat 20 notes into a book.\n\nClick into book.\nRun quarto create-project --type book\nModify _quarto.yml to be sure all notes are added as chapters.\nPublish it! quarto publish\nAdd an icon to your website sidebar\nCreate a crossreference between chapters (add a reference to a figure from chapter 2 in chapter 4.)\n\n\n\n\n−+\n10:00\n\n\n\n\n\n\nIntro to Quarto"
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#your-turn",
+    "href": "materials/1-single-docs/3-extensions/slides.html#your-turn",
+    "title": "Intro to Extensions",
+    "section": "Your Turn",
+    "text": "Your Turn\nRefresh your knowledge of markdown by opening quarto-puzzle.qmd and adding five features.\nRender after each change to your document to check your progress!\n\nAdd an author to the yaml.\nConvert “Advanced Quarto” to be a level two header.\nAdd a link to the Quarto website (https://quarto.org/) on the word “Quarto” that appears before the comma in the first sentence.\nTurn the schedule into a bulleted list with 8 items.\nAt the end of the document, insert the image quarto-logo.png found in this directory and make it 150 pixels wide.\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#document-filters",
+    "href": "materials/1-single-docs/3-extensions/slides.html#document-filters",
+    "title": "Intro to Extensions",
+    "section": "Document filters",
+    "text": "Document filters\n\nAdd specific functionality to a document by modifying its structure during the render process.\n\n\n\nThe modification is done by a Lua script."
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#filters-as-a-quarto-extension",
+    "href": "materials/1-single-docs/3-extensions/slides.html#filters-as-a-quarto-extension",
+    "title": "Intro to Extensions",
+    "section": "Filters as a Quarto Extension",
+    "text": "Filters as a Quarto Extension\n\n\n\n\n\nSource: https://quarto.org/docs/extensions/"
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#adding-an-extension",
+    "href": "materials/1-single-docs/3-extensions/slides.html#adding-an-extension",
+    "title": "Intro to Extensions",
+    "section": "Adding an Extension",
+    "text": "Adding an Extension\nIn your document directory run at the terminal:\nquarto add &lt; github name &gt;/&lt; repo name &gt;\n\n\nExample\nTo get the quarto-puzzle filter on any doc:\nquarto add qmdr/quarto-puzzle\nthen in the document yaml\n---\nfilters:\n  - quarto-puzzle\n---"
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#shortcodes",
+    "href": "materials/1-single-docs/3-extensions/slides.html#shortcodes",
+    "title": "Intro to Extensions",
+    "section": "Shortcodes",
+    "text": "Shortcodes\n\nA document filter that will inject particular content into your document at the location of your shortcode.\n\nThis is a paragraph in my document.\n\n{{ &lt; shortcode_name arg1 arg2 etc &gt;}}\n\nHere is a nother paragraph after the shortcode."
+  },
+  {
+    "objectID": "materials/1-single-docs/3-extensions/slides.html#your-turn-1",
+    "href": "materials/1-single-docs/3-extensions/slides.html#your-turn-1",
+    "title": "Intro to Extensions",
+    "section": "Your Turn",
+    "text": "Your Turn\nChoose your own extension! Select one of the following shortcode extensions to add to your documents.\n\nFont Awesome\nhttps://github.com/quarto-ext/fontawesome\nQR Code\nhttps://github.com/jmbuhr/quarto-qrcode\n\n\n\n\n−+\n04:00\n\n\n\n\n\n\nIntro to Quarto"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#anatomy-of-a-document",
+    "href": "materials/1-single-docs/4-presentations/slides.html#anatomy-of-a-document",
+    "title": "Presentations",
+    "section": "Anatomy of a Document",
+    "text": "Anatomy of a Document\nPresentations, like any Quarto document,\n\nYAML format: revealjs\nMarkdown\nCode cells"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#toc",
+    "href": "materials/1-single-docs/4-presentations/slides.html#toc",
+    "title": "Presentations",
+    "section": "Our Turn",
+    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd some organization\nReveal on click\nSplit content into columns\nDeal with code more deftly\nAdd logo and footer\nEnable slide annotation"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#your-turn",
+    "href": "materials/1-single-docs/4-presentations/slides.html#your-turn",
+    "title": "Presentations",
+    "section": "Your Turn",
+    "text": "Your Turn\nPick up where we left off and modify then YAML to…\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\nExperiment with different slide background options\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#our-turn",
+    "href": "materials/1-single-docs/4-presentations/slides.html#our-turn",
+    "title": "Presentations",
+    "section": "Our Turn",
+    "text": "Our Turn\nThis slide deck is in desperate need of some help. Let’s…\n\nAdd a timer\nPrint to PDF\nPrepare to present\nAdd a theme"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#scss",
+    "href": "materials/1-single-docs/4-presentations/slides.html#scss",
+    "title": "Presentations",
+    "section": "SCSS",
+    "text": "SCSS\n/*-- scss:defaults --*/\n\n// fonts\n$font-family-sans-serif: \"Palatino Linotype\", serif !default;\n\n// colors\n$body-bg: #f0f1eb !default;\n\n// headings\n$presentation-heading-font: \"Palatino Linotype\", serif !default;\n$presentation-heading-color: #383d3d !default;\n\n/*-- scss:rules --*/\n\nblockquote {\n  margin-left: 80px !important;\n}"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#your-turn-1",
+    "href": "materials/1-single-docs/4-presentations/slides.html#your-turn-1",
+    "title": "Presentations",
+    "section": "Your Turn",
+    "text": "Your Turn\nIt’s time to make this presentation really shine. Use SASS variables to\n\nSelect a new theme to use.\nPersonalize your theme by copy-and-pasting the example in the docs into a custom.scss file then…\n\nChanging the background color\nChanging the font size.\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#any-other-questions",
+    "href": "materials/1-single-docs/4-presentations/slides.html#any-other-questions",
+    "title": "Presentations",
+    "section": "Any other questions?",
+    "text": "Any other questions?"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#org",
+    "href": "materials/1-single-docs/4-presentations/slides.html#org",
+    "title": "Presentations",
+    "section": "Add some organization",
+    "text": "Add some organization\n\nAdd title slides by starting a slide with # instead of ## (docs).\nPress “o” to see slide overview (docs).\n\n\n Return to Our Turn"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#click",
+    "href": "materials/1-single-docs/4-presentations/slides.html#click",
+    "title": "Presentations",
+    "section": "Reveal on click",
+    "text": "Reveal on click\n\nAdd . . . on a new line to introduce a break in the slide that you can click to advance.\nCan add the .fragment class to any div or span to reveal on click (docs).\nAdd .incremental class to a div outside a list to incrementally reveal list items (docs).\nCan set incremental: true option in yaml under format: revealjs.\nCan create an exception using .nonincremental class on a div.\n\n\n Return to Our Turn"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#cols",
+    "href": "materials/1-single-docs/4-presentations/slides.html#cols",
+    "title": "Presentations",
+    "section": "Split content into columns",
+    "text": "Split content into columns\nNest .column divs inside a .columns div and specify their width (docs)\n:::{.columns}\n\n:::{.column width=\"50%\"}\nHere is the stuff on the left.\n:::\n\n:::{.column width=\"50%\"}\nHere is the stuff on the right.\n:::\n\n:::\n\n Return to Our Turn"
+  },
+  {
+    "objectID": "materials/1-single-docs/4-presentations/slides.html#code",
+    "href": "materials/1-single-docs/4-presentations/slides.html#code",
+    "title": "Presentations",
+    "section": "Deal with code more deftly",
+    "text": "Deal with code more deftly\n\nNaive way: put a code cell in left column with eval: false and a copy of it in the right column with echo: false.\nInstead, try putting both of those code cells in a div with .panel-tabset. Precede each cell block with a level 2 header to serve as the label for each tab.\nBetter yet: remove the tabset and the columns. Add the code cell option.\n```{r}\n#| output-location: column-fragment\n```\nThis will put it in the right column and appear after a click. Read the docs for other good options (docs)\n\n\n Return to Our Turn \n\n\n\n\nIntro to Quarto"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html",
@@ -1557,7 +1659,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1]  1.53909923  0.50424882 -0.03907076  0.70905476 -0.23502942"
+    "text": "Executing code\n\nrnorm(5)\n\n[1] -0.5697198  1.2134605 -1.1186571  0.1357482  0.9752609"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
