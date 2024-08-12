@@ -19,8 +19,9 @@ Please share ...
 
 1.  Your name
 2.  Where you're from
-3.  What you work on in 3 words or fewer
-4.  Name one thing you've made that you're proud of
+3.  What you work on in
+4.  What computational publishing tools you've used (Quarto Presentation, R Markdown, Bookdown, Jupyter Notebooks, etc)
+5.  One thing you've made that you're proud of
 :::
 
 # About the Workshop
