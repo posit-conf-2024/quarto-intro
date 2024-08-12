@@ -10,7 +10,7 @@ format: qmdrslides-revealjs
 From the last exercise . . .
 
 ``` bash
-quarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md
+quarto pandoc -f html -t markdown 3-markdown-goal.html -o answer.md
 ```
 
 . . .
@@ -208,7 +208,7 @@ A novelty clock, [watch](#dogwatch), and the like for keeping time at an animal'
 |  123  |  123 |   123   |   123  |
 |    1  |    1 |     1   |     1  |
 
-: Sample markdown table. {#mytab}
+: Sample markdown table.
 ```
 
 . . .
@@ -221,7 +221,7 @@ A novelty clock, [watch](#dogwatch), and the like for keeping time at an animal'
 |   123 | 123  | 123     |  123   |
 |     1 | 1    | 1       |   1    |
 
-: Sample markdown table. {#mytab}
+: Sample markdown table.
 
 ## Grid tables
 
@@ -563,7 +563,7 @@ Quarto makes available several layout *attributes* that apply to broad range of 
 -   `layout-valign`: align elements (`top`, `center`, `bottom`, `default`).
 -   `layout`: Split elements into a 2D array by rows and columns[^1].
 
-[^1]: For more control, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the \[Guide\]{https://quarto.org/docs/output-formats/page-layout.html#article}.
+[^1]: For more control, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the Guide: https://quarto.org/docs/output-formats/page-layout.html#article.
 
 ## Element Layouts {auto-animate="true"}
 
@@ -664,7 +664,7 @@ for dogs is seven, for example.
 
 `layout`: The layout attribute[^2] is a 2-dimensional array where the first dimension defines rows and the second columns.
 
-[^2]: For more control with HTML output, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the \[Guide\]{https://quarto.org/docs/output-formats/page-layout.html#article}.
+[^2]: For more control with HTML output, see `{.grid}` which relies up the CSS Bootstrap Grid system. See the Guide: https://quarto.org/docs/output-formats/page-layout.html#article.
 
 \
 

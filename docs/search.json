@@ -1525,7 +1525,7 @@
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it",
     "title": "Polishing Documents",
     "section": "What happens when you pandoc it?",
-    "text": "What happens when you pandoc it?\nFrom the last exercise . . .\nquarto pandoc -f html -t markdown 3-markdow-goal.html -o answer.md\n\n\n\n\n\n\n\n\nThis looks familiar!"
+    "text": "What happens when you pandoc it?\nFrom the last exercise . . .\nquarto pandoc -f html -t markdown 3-markdown-goal.html -o answer.md\n\n\n\n\n\n\n\n\nThis looks familiar!"
   },
   {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#what-happens-when-you-pandoc-it-1",
@@ -1609,7 +1609,7 @@
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#markdown-tables",
     "title": "Polishing Documents",
     "section": "Markdown tables",
-    "text": "Markdown tables\nMarkdown:\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\n: Sample markdown table. {#mytab}\n\nOutput:\n\nSample markdown table. {#mytab}\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
+    "text": "Markdown tables\nMarkdown:\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\n: Sample markdown table.\n\nOutput:\n\nSample markdown table.\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
   },
   {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#grid-tables",
@@ -1693,7 +1693,7 @@
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts",
     "title": "Polishing Documents",
     "section": "Element Layouts",
-    "text": "Element Layouts\nQuarto makes available several layout attributes that apply to broad range of block elements.\n\nlayout-ncol: split elements across n columns (2, 3, …).\nlayout-nrow: split elements across n rows (2, 3, …).\nlayout-valign: align elements (top, center, bottom, default).\nlayout: Split elements into a 2D array by rows and columns1.\n\nFor more control, see {.grid} which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}."
+    "text": "Element Layouts\nQuarto makes available several layout attributes that apply to broad range of block elements.\n\nlayout-ncol: split elements across n columns (2, 3, …).\nlayout-nrow: split elements across n rows (2, 3, …).\nlayout-valign: align elements (top, center, bottom, default).\nlayout: Split elements into a 2D array by rows and columns1.\n\nFor more control, see {.grid} which relies up the CSS Bootstrap Grid system. See the Guide: https://quarto.org/docs/output-formats/page-layout.html#article."
   },
   {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layouts-1",
@@ -1714,7 +1714,7 @@
     "href": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array",
     "title": "Polishing Documents",
     "section": "Element Layout Array",
-    "text": "Element Layout Array\nlayout: The layout attribute1 is a 2-dimensional array where the first dimension defines rows and the second columns.\n\n\n\nlayout=\"[[1,1], [1]]\" translates to: create two rows, the first of which has two columns of equal size and the second of which has a single column.\nYou can scale the relative dimension of each panel by changing the 1s.\n\nFor more control with HTML output, see {.grid} which relies up the CSS Bootstrap Grid system. See the [Guide]{https://quarto.org/docs/output-formats/page-layout.html#article}."
+    "text": "Element Layout Array\nlayout: The layout attribute1 is a 2-dimensional array where the first dimension defines rows and the second columns.\n\n\n\nlayout=\"[[1,1], [1]]\" translates to: create two rows, the first of which has two columns of equal size and the second of which has a single column.\nYou can scale the relative dimension of each panel by changing the 1s.\n\nFor more control with HTML output, see {.grid} which relies up the CSS Bootstrap Grid system. See the Guide: https://quarto.org/docs/output-formats/page-layout.html#article."
   },
   {
     "objectID": "materials/1-single-docs/2-polishing-docs/slides.html#element-layout-array-1",
