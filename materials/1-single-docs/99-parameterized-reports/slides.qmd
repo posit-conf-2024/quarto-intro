@@ -1,0 +1,65 @@
+---
+title: "Extra: Parameterized Reports"
+format: qmdrslides-revealjs
+---
+
+
+## Parameterized Reports
+
+#### Use Case
+
+You have a document (pdf, html file, presentation) that you will need to produce many times with only tiny changes.
+
+#### Approach
+
+1. Recode those changes as parameters.
+2. Pass parameters during the render process using a script
+   - Shell script
+   - Python script
+   - R script
+
+## Params syntax
+
+Place parameters in YAML under the `params` key.
+
+```yaml
+---
+params:
+  alpha: 0.1
+  ratio: 0.1
+---
+```
+
+You can now access the values inside the `params` R list.
+
+```{r}
+#| eval: false
+params$alpha
+```
+
+```{r}
+#| echo: false
+0.1
+```
+
+
+## Our Turn
+
+:::{.task}
+1. Open `parameterized-reports/grade-report.qmd`.
+2. Filter the data set to only use the data of `"Rohan Prakesh"`.
+3. Make that a variable accessible through `params`.
+4. Add an inline reference to the student.
+5. Run `parameterized-reports/make-grade-reports.r`.
+:::
+
+## Your Turn
+
+This one is a real challenge!
+
+:::{.task}
+1. Create a second qmd called `annual-grade-report.qmd`.
+2. Include a few plots that show the aggregate grade performance across all students.
+3. Parameterize the report in terms of `year`.
+4. Modify the code from `make-grade-reports.r` to produce two grade reports: one for 2023 and one for 2024.
+:::

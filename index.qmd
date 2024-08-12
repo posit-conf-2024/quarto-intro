@@ -34,4 +34,5 @@ These workshops will prepare you to author a rich array of documents in Quarto, 
 -   2-3 pm [Presentations](materials/1-single-docs/4-presentations)
 -   3-3:30 pm Coffee Break
 -   3:30-5:00 pm [Sharing your Work](materials/1-single-docs/5-sharing-your-work)
+-   If time: [Parameterized Reports](materials/1-single-docs/99-parameterized-reports)
 

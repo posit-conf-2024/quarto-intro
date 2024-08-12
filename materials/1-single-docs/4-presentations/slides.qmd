@@ -83,6 +83,7 @@ It's time to make this presentation really shine. Use SASS variables to
 countdown::countdown(7)
 ```
 
+## Any other questions?
 
 # Appendix
 

@@ -12,7 +12,7 @@ title: "Intro to Extensions"
 
 ### Afternoon Exercises
 
-```{{r}}
+```r
 usethis::use_course("https://github.com/qmdr/intro-quarto-afternoon/archive/refs/heads/master.zip")
 ```
 

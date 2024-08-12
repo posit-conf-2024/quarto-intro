@@ -39,6 +39,8 @@ website:
               href: materials/1-single-docs/4-presentations/index.qmd
             - text: "5. Sharing Your Work"
               href: materials/1-single-docs/5-sharing-your-work/index.qmd
+            - text: "6. Parameterized Reports"
+              href: materials/1-single-docs/99-parameterized-reports/index.qmd
   page-footer:
     right: "This page is built with {{< fa heart >}} and [Quarto](https://quarto.org/)."
     left: "&copy; 2024, Andrew Bray"
