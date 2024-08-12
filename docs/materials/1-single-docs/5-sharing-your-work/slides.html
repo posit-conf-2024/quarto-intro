@@ -12,7 +12,7 @@
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
-  <title>Intro to Quarto – Books</title>
+  <title>Intro to Quarto – Sharing Your Work</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -386,8 +386,6 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
 <div style="display:none;"></div>
@@ -395,68 +393,107 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#f8f5f0" data-background-image="../../../site_libs/quarto-contrib/quarto-project/qmdr/qmdrslides/seaplane-bg.png" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Books</h1>
+  <h1 class="title">Sharing Your Work</h1>
   <p class="subtitle">Workshop: Intro to Quarto <br> posit::conf 2024</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="anatomy-of-a-project" class="slide level2">
-<h2>Anatomy of a Project</h2>
-<p>books, like any project, are defined by <code>_quarto.yml</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> book</span></span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="fu">book</span><span class="kw">:</span></span>
-<span id="cb1-5"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"mybook"</span></span>
-<span id="cb1-6"><a></a><span class="at">  </span><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jane Doe"</span></span>
-<span id="cb1-7"><a></a><span class="at">  </span><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"8/18/2021"</span></span>
-<span id="cb1-8"><a></a><span class="at">  </span><span class="fu">chapters</span><span class="kw">:</span></span>
-<span id="cb1-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> index.qmd</span></span>
-<span id="cb1-10"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> intro.qmd</span></span>
-<span id="cb1-11"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> summary.qmd</span></span>
-<span id="cb1-12"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> references.qmd</span></span>
-<span id="cb1-13"><a></a></span>
-<span id="cb1-14"><a></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
-<span id="cb1-15"><a></a></span>
-<span id="cb1-16"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-17"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb1-18"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb1-19"><a></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span></span>
-<span id="cb1-20"><a></a><span class="at">    </span><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> scrreport</span></span>
-<span id="cb1-21"><a></a><span class="at">  </span><span class="fu">epub</span><span class="kw">:</span></span>
-<span id="cb1-22"><a></a><span class="at">    </span><span class="fu">cover-image</span><span class="kw">:</span><span class="at"> cover.png</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section>
+<section id="publishing" class="title-slide slide level1 center">
+<h1>Publishing</h1>
+
 </section>
-<section id="our-turn" class="slide level2 our-turn">
+<section id="web-publishing-venues" class="slide level2">
+<h2>Web publishing venues</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Destination</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="quarto-pub.qmd">Quarto Pub</a></td>
+<td>Publishing service for Quarto documents, websites, and books.</td>
+</tr>
+<tr class="even">
+<td><a href="github-pages.qmd">GitHub Pages</a></td>
+<td>Publish content based on source code managed within a GitHub repository.</td>
+</tr>
+<tr class="odd">
+<td><a href="rstudio-connect.qmd">Posit Connect</a></td>
+<td>Publishing platform for secure sharing of data products within an organization.</td>
+</tr>
+<tr class="even">
+<td><a href="netlify.qmd">Netlify</a></td>
+<td>Professional web publishing platform.</td>
+</tr>
+<tr class="odd">
+<td><a href="confluence.qmd">Confluence</a></td>
+<td>Publishing platform for supporting team collaboration.</td>
+</tr>
+</tbody>
+</table>
+<p>… and more.</p>
+</section>
+<section id="quartopub" class="slide level2">
+<h2>Quartopub</h2>
+<p>Visit <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a> and set up a free account.</p>
+<div style="text-align: center">
+<p><img data-src="images/quartopub.png"></p>
+</div>
+</section>
+<section id="quarto-publish" class="slide level2">
+<h2><span class="filename">quarto publish</span></h2>
+<p><br>
+<br>
+</p>
+<p>At the Terminal, run:</p>
+<p><br>
+</p>
+<div style="font-size: 2em">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> publish <span class="op">&lt;</span>document<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
+<section>
+<section id="custom-formats" class="title-slide slide level1 center">
+<h1>Custom Formats</h1>
+
+</section>
+<section id="our-turn" class="slide level2">
 <h2>Our Turn</h2>
-<p>Let’s create our first book!</p>
-<ol type="1">
-<li>Click into <code>empty-book</code></li>
-<li>Run <code>quarto create-project --type book</code></li>
-<li>Run <code>quarto render</code></li>
-<li>Run <code>quarto publish</code></li>
-</ol>
+<p>Let’s</p>
+</section></section>
+<section id="custom-revealjs" class="title-slide slide level1 center">
+<h1>Custom Revealjs</h1>
+
 </section>
-<section id="your-turn" class="slide level2 your-turn">
-<h2>Your Turn</h2>
-<p>Let’s turn the Stat 20 notes into a book.</p>
+
+<section>
+<section id="journal-articles" class="title-slide slide level1 center">
+<h1>Journal Articles</h1>
+
+</section>
+<section id="our-turn-1" class="slide level2 our-turn">
+<h2>Our Turn</h2>
+<p>Let’s prepare an article to submit to the Journal of Statistical Software.</p>
 <ol type="1">
-<li>Click into <code>book</code>.</li>
-<li>Run <code>quarto create-project --type book</code></li>
-<li>Modify <code>_quarto.yml</code> to be sure all notes are added as <a href="https://quarto.org/docs/books/book-structure.html#overview">chapters</a>.</li>
-<li>Publish it! <code>quarto publish</code></li>
-<li>Add an icon to your website <a href="https://quarto.org/docs/reference/projects/books.html#sidebar-tools">sidebar</a></li>
-<li>Create a <a href="https://quarto.org/docs/authoring/cross-references.html">crossreference</a> <em>between</em> chapters (add a reference to a figure from chapter 2 in chapter 4.)</li>
+<li><p>At the Terminal.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">quarto</span> use template quarto-journals/jss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Render.</p></li>
+<li><p>Modify to your hearts content.</p></li>
 </ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_72e391db" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
+</section></section>
+<section id="websites" class="title-slide slide level1 center">
+<h1>Websites</h1>
+
+</section>
+
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank You</h1>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -674,44 +711,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
