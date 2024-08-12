@@ -41,7 +41,7 @@ quarto publish <document>
 :::
 
 
-# Custom PDF
+# Custom Formats
 
 ## Our Turn
 
@@ -64,5 +64,7 @@ Let's prepare an article to submit to the Journal of Statistical Software.
 2. Render.
 3. Modify to your hearts content.
 
+
+# Websites
 
 # Thank You

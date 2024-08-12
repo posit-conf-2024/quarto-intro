@@ -1,0 +1,100 @@
+---
+title: "Intro to Extensions"
+format: qmdrslides-revealjs
+---
+
+## Your Turn {.your-turn style="font-size: .9em"}
+
+Refresh your knowledge of markdown by opening `quarto-puzzle.qmd` and adding five features.
+
+_Render after each change to your document to check your progress!_
+
+1. Add an author to the yaml.
+2. Convert "Advanced Quarto" to be a level two header.
+3. Add a link to the Quarto website (https://quarto.org/) on the word "Quarto" that appears before the comma in the first sentence.
+4. Turn the schedule into a bulleted list with 8 items.
+5. At the end of the document, insert the image quarto-logo.png found in this directory and make it 150 pixels wide.
+
+```{r}
+countdown::countdown(7)
+```
+
+
+## Document filters
+
+> Add specific functionality to a document by modifying its structure during the render process.
+
+. . .
+
+> The modification is done by a Lua script.
+
+
+## Filters as a Quarto Extension
+
+:::{style="text-align: center"}
+```{=html}
+<iframe src="https://quarto.org/docs/extensions/" title = "Quarto Extensions" frameborder="1" height="600" width="1300" style="border: 1px solid black"></iframe>
+```
+:::
+
+::: aside
+Source: <https://quarto.org/docs/extensions/>
+:::
+
+
+## Adding an Extension {.our-turn}
+
+In your document directory run at the terminal:
+
+```bash
+quarto add < github name >/< repo name >
+```
+
+\
+
+### Example
+
+To get the quarto-puzzle filter on any doc:
+
+```bash
+quarto add qmdr/quarto-puzzle
+```
+
+then in the document yaml
+
+```yaml
+---
+filters:
+  - quarto-puzzle
+---
+```
+
+## Shortcodes
+
+> A document filter that will inject particular content into your document at the location of your shortcode.
+
+```markdown
+This is a paragraph in my document.
+
+{{ < shortcode_name arg1 arg2 etc >}}
+
+Here is a nother paragraph after the shortcode.
+```
+
+## Your Turn {.your-turn}
+
+Choose your own extension! Select one of the following shortcode extensions to add to your documents.
+
+1. *Font Awesome*
+
+   <https://github.com/quarto-ext/fontawesome>
+
+2. *QR Code*
+
+   <https://github.com/jmbuhr/quarto-qrcode>
+
+```{r}
+countdown::countdown(4)
+```
+
+

@@ -31,6 +31,12 @@ title: "Welcome to Quarto"
 <!--    viii. Display Math -->
 <!--    ix. YAML -->
 
-<!-- #### Exercises -->
+### Morning Exercises
+
+```{{r}}
+usethis::use_course("https://github.com/qmdr/intro-quarto-morning/archive/refs/heads/master.zip")
+```
+
+
 
 

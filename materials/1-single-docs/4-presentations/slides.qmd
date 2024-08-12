@@ -23,7 +23,7 @@ This slide deck is in desperate need of some help. Let's...
 5. Add logo and footer
 6. Enable slide annotation
 
-## Your Turn {.your-turn style="font-size: .8em"}
+## Your Turn {.your-turn}
 
 Pick up where we left off and modify then YAML to...
 
@@ -70,14 +70,19 @@ blockquote {
 }
 ```
 
-## Your Turn {.your-turn style="font-size: .8em"}
+## Your Turn {.your-turn}
 
 It's time to make this presentation really shine. Use SASS variables to
 
 1. Select a new [theme](https://quarto.org/docs/presentations/revealjs/themes.html#using-themes) to use.
-2. Personalize your theme by
+2. Personalize your theme by copy-and-pasting the example in the docs into a `custom.scss` file then...
    a. Changing the background color
    b. Changing the font size.
+   
+```{r}
+countdown::countdown(7)
+```
+
 
 # Appendix
 

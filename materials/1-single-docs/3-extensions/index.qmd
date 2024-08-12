@@ -1,0 +1,18 @@
+---
+title: "Intro to Extensions"
+---
+
+> Test your new found knowledge of Markdown and explore the power of document filters and shortcodes.
+
+[Full Screen](slides.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
+
+### Afternoon Exercises
+
+```{{r}}
+usethis::use_course("https://github.com/qmdr/intro-quarto-afternoon/archive/refs/heads/master.zip")
+```
+
