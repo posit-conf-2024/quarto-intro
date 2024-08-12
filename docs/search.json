@@ -4,7 +4,7 @@
     "href": "materials/1-single-docs/1-welcome-to-quarto/slides.html#introductions",
     "title": "Welcome to Quarto",
     "section": "Introductions",
-    "text": "Introductions\nTake ~2 minutes to introduce yourself to your neighbors.\n\n\n\nPlease share …\n\nYour name\nWhere you’re from\nWhat you work on in 3 words or fewer\nName one thing you’ve made that you’re proud of"
+    "text": "Introductions\nTake ~2 minutes to introduce yourself to your neighbors.\n\n\n\nPlease share …\n\nYour name\nWhere you’re from\nWhat you work on in\nWhat computational publishing tools you’ve used (Quarto Presentation, R Markdown, Bookdown, Jupyter Notebooks, etc)\nOne thing you’ve made that you’re proud of"
   },
   {
     "objectID": "materials/1-single-docs/1-welcome-to-quarto/slides.html#section",
@@ -1557,7 +1557,7 @@
     "href": "materials/1-single-docs/old-computation/exercises/sandbox.html#executing-code",
     "title": "Sandbox",
     "section": "Executing code",
-    "text": "Executing code\n\nrnorm(5)\n\n[1]  0.14773178  0.17524551  1.39053249  1.39334139 -0.05126463"
+    "text": "Executing code\n\nrnorm(5)\n\n[1]  1.53909923  0.50424882 -0.03907076  0.70905476 -0.23502942"
   },
   {
     "objectID": "materials/1-single-docs/old-computation/exercises/sandbox.html#figure-output",
